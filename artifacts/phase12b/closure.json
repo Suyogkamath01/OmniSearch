@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "project": "OmniSearch",
+  "phase": "Phase 12B — Proper Composed Image Retrieval Evaluation",
+  "closure_status": "PARTIAL",
+  "closure_classification": "NON-BLOCKING",
+  "blocking_for_phase13": false,
+  "ready_for_phase13": true,
+  "implementation_status": "The CIRCO adapter, query validation, multiple-ground-truth metric definitions, exact retrieval ladder, paired-comparison infrastructure, and latency/qualitative protocols are implemented.",
+  "real_execution_status": "DEFERRED_STORAGE",
+  "real_circo_results_claimed": false,
+  "official_validation_metadata": {
+    "query_count": 220,
+    "queries_with_multiple_ground_truths": 191,
+    "mean_ground_truth_count": 4.163636363636364
+  },
+  "storage_blocker": {
+    "official_archive_url": "http://images.cocodataset.org/zips/unlabeled2017.zip",
+    "archive_bytes": 20126613414,
+    "expected_extracted_image_bytes": 20102247620,
+    "expected_gallery_file_count": 123404,
+    "expected_index_bytes": 252731392,
+    "current_preflight": "artifacts/phase12b/preflight.json",
+    "download_attempted": false,
+    "substitute_dataset_used": false
+  },
+  "preserved_artifacts": [
+    "artifacts/phase12b/preflight.json",
+    "artifacts/phase12b/phase12b_report.json",
+    "artifacts/phase12b/phase12b_report.md"
+  ],
+  "phase12_relationship": "Phase 12 remains the executed controlled same-image fusion sanity check. Phase 12B is the separate proper CIRCO correction and is not evidence of benchmark performance."
+}
