@@ -1,0 +1,10 @@
+# Streamlit Community Cloud runtime for the existing UI and compact CPU demo.
+# The full validated checkpoint, COCO images, caches, and indexes remain local-only.
+-e .
+faiss-cpu==1.15.0
+numpy==2.5.2
+Pillow==11.3.0
+safetensors==0.8.0
+streamlit==1.61.1
+torch==2.13.0
+transformers==5.15.0
