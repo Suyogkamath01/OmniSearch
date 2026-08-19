@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "repository_description": "A reproducible CLIP-based multimodal retrieval system with exact FAISS search, FastAPI serving, and a Streamlit demo.",
+  "suggested_topics": [
+    "multimodal-retrieval",
+    "clip",
+    "faiss",
+    "pytorch",
+    "computer-vision",
+    "information-retrieval",
+    "fastapi",
+    "streamlit",
+    "machine-learning"
+  ],
+  "recommended_commit_grouping": [
+    "core retrieval and evaluation implementation",
+    "experiments and machine-readable evidence",
+    "API/UI and deployment tooling",
+    "tests, CI, and reproducibility configuration",
+    "final documentation and portfolio material"
+  ],
+  "release_notes": "Do not include local COCO images, checkpoints, embedding arrays, FAISS binaries, model caches, secrets, or private data in a public release.",
+  "git_policy": "Recommendations only. Phase 27 did not stage, commit, push, or modify the Git index."
+}
