@@ -1,0 +1,40 @@
+# Interview summary
+
+## What is OmniSearch?
+
+It is a CLIP-based dual-encoder retrieval system. A text query is mapped into
+the same normalized embedding space as corpus images, and an image query is
+mapped into the space used by corpus captions. Exact FAISS search returns the
+nearest items in the requested direction.
+
+## What was the hardest technical problem?
+
+Keeping the evaluation honest while the project grew. I had to preserve
+image-grouped splits, prevent captions from crossing splits, keep validation
+separate from test selection, and make the API use the same checkpoint, cache,
+and index identities as the experiments.
+
+## What experiment surprised you?
+
+The reranker was the clearest surprise. It looked like a natural next step,
+but it degraded every reported retrieval metric. That result made the final
+system simpler rather than more complicated.
+
+## Why use FAISS Flat?
+
+The final corpus had about 5,000 images, so exact inner-product search was
+practical. Approximate indexes were faster in some settings but lost measured
+neighbor or semantic fidelity, so they were left as future scale options.
+
+## Why is the reranker not in the final system?
+
+The tested Stage 2 reranker added roughly 1 ms/query and reduced held-out
+quality in both directions. It was a useful negative result, not a component
+worth keeping for appearances.
+
+## What would you do next?
+
+I would complete the official CIRCO run with enough storage, add
+external-domain and multilingual evaluation, collect human relevance
+judgments, and only then revisit learned fusion, reranking, or ANN at a larger
+corpus scale.
