@@ -1,0 +1,779 @@
+{
+  "passed": true,
+  "records_checked": 5000,
+  "unique_image_ids": 5000,
+  "total_captions": 25014,
+  "duplicate_image_ids": {},
+  "missing_caption_image_ids": [],
+  "caption_count_mismatches": {},
+  "duplicate_caption_groups": {
+    "a airplane that is flying through the sky": [
+      "coco2017_val#551457",
+      "coco2017_val#799011"
+    ],
+    "a baseball game in progress with the batter up to plate.": [
+      "coco2017_val#615698",
+      "coco2017_val#702849"
+    ],
+    "a baseball player holding a baseball bat during a game.": [
+      "coco2017_val#131292",
+      "coco2017_val#281811"
+    ],
+    "a baseball player holding a bat next to home plate.": [
+      "coco2017_val#478204",
+      "coco2017_val#585006"
+    ],
+    "a baseball player holding a bat while standing on a field.": [
+      "coco2017_val#585876",
+      "coco2017_val#602501"
+    ],
+    "a baseball player pitching a ball on top of a field.": [
+      "coco2017_val#365920",
+      "coco2017_val#589481"
+    ],
+    "a baseball player pitching a baseball on a field.": [
+      "coco2017_val#149207",
+      "coco2017_val#549335"
+    ],
+    "a bathroom scene with focus on the toilet.": [
+      "coco2017_val#193401",
+      "coco2017_val#38283"
+    ],
+    "a boy swinging a baseball bat at a ball.": [
+      "coco2017_val#526613",
+      "coco2017_val#753219"
+    ],
+    "a car is driving through a flooded street.": [
+      "coco2017_val#766438",
+      "coco2017_val#767683"
+    ],
+    "a cat sitting in front of a flat screen tv.": [
+      "coco2017_val#569828",
+      "coco2017_val#703935"
+    ],
+    "a cat that is laying down on a chair.": [
+      "coco2017_val#713879",
+      "coco2017_val#769267"
+    ],
+    "a close up of a plate of food with broccoli": [
+      "coco2017_val#360453",
+      "coco2017_val#393141"
+    ],
+    "a computer desk with two monitors and a laptop.": [
+      "coco2017_val#723829",
+      "coco2017_val#774880"
+    ],
+    "a couple of buses that are parked next to each other": [
+      "coco2017_val#781904",
+      "coco2017_val#793570"
+    ],
+    "a couple of giraffe standing next to each other.": [
+      "coco2017_val#427142",
+      "coco2017_val#664133"
+    ],
+    "a crowd of people standing on a field flying kites.": [
+      "coco2017_val#205273",
+      "coco2017_val#574431"
+    ],
+    "a glass vase with some flowers inside of it": [
+      "coco2017_val#630928",
+      "coco2017_val#688919"
+    ],
+    "a group of dogs that are standing in the grass.": [
+      "coco2017_val#472459",
+      "coco2017_val#749634"
+    ],
+    "a group of giraffes that are standing in the grass.": [
+      "coco2017_val#748945",
+      "coco2017_val#782818"
+    ],
+    "a group of men on a field playing baseball.": [
+      "coco2017_val#301218",
+      "coco2017_val#338255",
+      "coco2017_val#339668",
+      "coco2017_val#579569",
+      "coco2017_val#829449"
+    ],
+    "a group of men playing a game of frisbee.": [
+      "coco2017_val#368707",
+      "coco2017_val#591641"
+    ],
+    "a group of people flying kites on top of a sandy beach.": [
+      "coco2017_val#508260",
+      "coco2017_val#75343"
+    ],
+    "a group of people riding skis on a snowy surface": [
+      "coco2017_val#608832",
+      "coco2017_val#727757"
+    ],
+    "a group of people sitting around a table.": [
+      "coco2017_val#597110",
+      "coco2017_val#714645"
+    ],
+    "a group of people sitting at a table.": [
+      "coco2017_val#308951",
+      "coco2017_val#544076"
+    ],
+    "a group of people standing in a room.": [
+      "coco2017_val#361759",
+      "coco2017_val#456526"
+    ],
+    "a group of young children sitting next to each other.": [
+      "coco2017_val#504928",
+      "coco2017_val#704574"
+    ],
+    "a guy on a skate board high in the air.": [
+      "coco2017_val#380586",
+      "coco2017_val#434969"
+    ],
+    "a herd of cattle grazing on a lush green field.": [
+      "coco2017_val#231620",
+      "coco2017_val#352551"
+    ],
+    "a herd of sheep grazing on a lush green field.": [
+      "coco2017_val#105027",
+      "coco2017_val#387309"
+    ],
+    "a laptop computer sitting on top of a desk.": [
+      "coco2017_val#221172",
+      "coco2017_val#640454"
+    ],
+    "a laptop computer sitting on top of a wooden desk.": [
+      "coco2017_val#334388",
+      "coco2017_val#567663"
+    ],
+    "a laptop computer sitting on top of a wooden table.": [
+      "coco2017_val#571130",
+      "coco2017_val#573422"
+    ],
+    "a large airplane is ascending from the runway.": [
+      "coco2017_val#559695",
+      "coco2017_val#560658"
+    ],
+    "a large clock mounted to the side of a building.": [
+      "coco2017_val#546685",
+      "coco2017_val#594037"
+    ],
+    "a large jetliner sitting on top of an airport runway.": [
+      "coco2017_val#478499",
+      "coco2017_val#533624",
+      "coco2017_val#548172"
+    ],
+    "a large long train on a steel track.": [
+      "coco2017_val#325220",
+      "coco2017_val#353139",
+      "coco2017_val#382774",
+      "coco2017_val#386323",
+      "coco2017_val#415663",
+      "coco2017_val#453140",
+      "coco2017_val#564464",
+      "coco2017_val#578929",
+      "coco2017_val#581224",
+      "coco2017_val#644211",
+      "coco2017_val#645299"
+    ],
+    "a living room filled with furniture and decor.": [
+      "coco2017_val#453640",
+      "coco2017_val#538982"
+    ],
+    "a man attempts a trick after riding off of a low ramp.": [
+      "coco2017_val#823630",
+      "coco2017_val#823633"
+    ],
+    "a man blowing out candles on a birthday cake.": [
+      "coco2017_val#25313",
+      "coco2017_val#27557"
+    ],
+    "a man blowing out candles on a cake.": [
+      "coco2017_val#124680",
+      "coco2017_val#131259"
+    ],
+    "a man flying through the air on top of a skateboard.": [
+      "coco2017_val#439198",
+      "coco2017_val#818099"
+    ],
+    "a man flying through the air while riding a skateboard.": [
+      "coco2017_val#180800",
+      "coco2017_val#283122",
+      "coco2017_val#355572",
+      "coco2017_val#502311",
+      "coco2017_val#704972",
+      "coco2017_val#719261",
+      "coco2017_val#734149"
+    ],
+    "a man flying through the air while riding a snowboard.": [
+      "coco2017_val#503906",
+      "coco2017_val#601017",
+      "coco2017_val#720608"
+    ],
+    "a man flying through the air while riding skis.": [
+      "coco2017_val#182542",
+      "coco2017_val#566569",
+      "coco2017_val#730038"
+    ],
+    "a man holding a tennis racquet on a court.": [
+      "coco2017_val#266021",
+      "coco2017_val#544319"
+    ],
+    "a man holding a tennis racquet on a tennis court.": [
+      "coco2017_val#123999",
+      "coco2017_val#151748",
+      "coco2017_val#165809",
+      "coco2017_val#168904",
+      "coco2017_val#221226",
+      "coco2017_val#386015",
+      "coco2017_val#70009",
+      "coco2017_val#83470",
+      "coco2017_val#86851"
+    ],
+    "a man holding a tennis racquet on top of a tennis court.": [
+      "coco2017_val#529747",
+      "coco2017_val#716343",
+      "coco2017_val#803331"
+    ],
+    "a man holding an umbrella in a hallway.": [
+      "coco2017_val#717298",
+      "coco2017_val#728122"
+    ],
+    "a man in black shirt doing a trick on a skateboard.": [
+      "coco2017_val#359298",
+      "coco2017_val#470426",
+      "coco2017_val#806597"
+    ],
+    "a man in white shirt and shorts playing a game of tennis.": [
+      "coco2017_val#260372",
+      "coco2017_val#281635"
+    ],
+    "a man is doing a trick on a skateboard.": [
+      "coco2017_val#199627",
+      "coco2017_val#46320"
+    ],
+    "a man is doing tricks on a skateboard.": [
+      "coco2017_val#708404",
+      "coco2017_val#765298"
+    ],
+    "a man is flying a kite at the beach.": [
+      "coco2017_val#158768",
+      "coco2017_val#564499"
+    ],
+    "a man on a court swinging a tennis racket.": [
+      "coco2017_val#288882",
+      "coco2017_val#326442",
+      "coco2017_val#329244",
+      "coco2017_val#352430"
+    ],
+    "a man on a court with a tennis racket.": [
+      "coco2017_val#344429",
+      "coco2017_val#364776"
+    ],
+    "a man on a surfboard riding a wave in the ocean.": [
+      "coco2017_val#494689",
+      "coco2017_val#797774"
+    ],
+    "a man on a surfboard riding a wave.": [
+      "coco2017_val#379872",
+      "coco2017_val#406513",
+      "coco2017_val#424312",
+      "coco2017_val#755552"
+    ],
+    "a man riding a skateboard down a cement ramp.": [
+      "coco2017_val#690764",
+      "coco2017_val#729815"
+    ],
+    "a man riding a skateboard up the side of a ramp.": [
+      "coco2017_val#199189",
+      "coco2017_val#217818",
+      "coco2017_val#381048",
+      "coco2017_val#549153",
+      "coco2017_val#606333",
+      "coco2017_val#697001"
+    ],
+    "a man riding a snowboard down a snow covered slope.": [
+      "coco2017_val#216637",
+      "coco2017_val#349967"
+    ],
+    "a man riding a surfboard on a wave in the ocean.": [
+      "coco2017_val#171921",
+      "coco2017_val#559173",
+      "coco2017_val#84383"
+    ],
+    "a man riding a wave on a surfboard in the ocean.": [
+      "coco2017_val#517045",
+      "coco2017_val#94496"
+    ],
+    "a man riding a wave on a surfboard.": [
+      "coco2017_val#168244",
+      "coco2017_val#415990"
+    ],
+    "a man riding a wave on top of a surfboard.": [
+      "coco2017_val#322633",
+      "coco2017_val#331441",
+      "coco2017_val#351541",
+      "coco2017_val#387145",
+      "coco2017_val#496006",
+      "coco2017_val#741129",
+      "coco2017_val#771893",
+      "coco2017_val#801888"
+    ],
+    "a man riding on the back of a brown horse.": [
+      "coco2017_val#402597",
+      "coco2017_val#556566"
+    ],
+    "a man riding on the back of a motorcycle.": [
+      "coco2017_val#381095",
+      "coco2017_val#695568"
+    ],
+    "a man riding skis down a snow covered slope.": [
+      "coco2017_val#181701",
+      "coco2017_val#611744",
+      "coco2017_val#697786",
+      "coco2017_val#738763",
+      "coco2017_val#784868"
+    ],
+    "a man riding skis while flying through the air.": [
+      "coco2017_val#105025",
+      "coco2017_val#590702"
+    ],
+    "a man standing next to a parked motorcycle.": [
+      "coco2017_val#292295",
+      "coco2017_val#692151"
+    ],
+    "a man standing on a tennis court holding a racquet.": [
+      "coco2017_val#261604",
+      "coco2017_val#305529",
+      "coco2017_val#334376",
+      "coco2017_val#478500",
+      "coco2017_val#548441",
+      "coco2017_val#783234"
+    ],
+    "a man swinging a tennis racquet at a ball on a court.": [
+      "coco2017_val#463731",
+      "coco2017_val#538805",
+      "coco2017_val#691094"
+    ],
+    "a man taking a swing at a tennis ball": [
+      "coco2017_val#145967",
+      "coco2017_val#162030",
+      "coco2017_val#173522"
+    ],
+    "a man that is on a surfboard in the water.": [
+      "coco2017_val#690127",
+      "coco2017_val#752782",
+      "coco2017_val#753183"
+    ],
+    "a man that is on a tennis court with a racquet.": [
+      "coco2017_val#457405",
+      "coco2017_val#692596"
+    ],
+    "a microwave oven with some food inside of it": [
+      "coco2017_val#663376",
+      "coco2017_val#811249"
+    ],
+    "a newly married couple cutting their wedding cake": [
+      "coco2017_val#315520",
+      "coco2017_val#510541"
+    ],
+    "a number of baseball players on a field": [
+      "coco2017_val#487570",
+      "coco2017_val#816846"
+    ],
+    "a number of people riding skis on a snowy surface": [
+      "coco2017_val#655647",
+      "coco2017_val#661499"
+    ],
+    "a passenger train pulls into a train station.": [
+      "coco2017_val#27454",
+      "coco2017_val#361110"
+    ],
+    "a person doing a trick on a skateboard": [
+      "coco2017_val#459857",
+      "coco2017_val#758185"
+    ],
+    "a person in a wetsuit riding a wave on a surfboard.": [
+      "coco2017_val#411760",
+      "coco2017_val#415974"
+    ],
+    "a person in the snow on some skis.": [
+      "coco2017_val#309603",
+      "coco2017_val#326498",
+      "coco2017_val#425753"
+    ],
+    "a person jumping a skate board in the air": [
+      "coco2017_val#446903",
+      "coco2017_val#503223",
+      "coco2017_val#780789"
+    ],
+    "a person jumping a snow board in the air": [
+      "coco2017_val#454355",
+      "coco2017_val#603924",
+      "coco2017_val#604760",
+      "coco2017_val#730760"
+    ],
+    "a person jumping up in the air on a skateboard.": [
+      "coco2017_val#441676",
+      "coco2017_val#468896"
+    ],
+    "a person on a court with a tennis racket.": [
+      "coco2017_val#459504",
+      "coco2017_val#462048",
+      "coco2017_val#543683",
+      "coco2017_val#563241"
+    ],
+    "a person on a skateboard on a street.": [
+      "coco2017_val#441678",
+      "coco2017_val#580528",
+      "coco2017_val#639449"
+    ],
+    "a person on a surf board riding a wave.": [
+      "coco2017_val#397670",
+      "coco2017_val#496672",
+      "coco2017_val#561864"
+    ],
+    "a person on a surfboard in the water.": [
+      "coco2017_val#361736",
+      "coco2017_val#386650",
+      "coco2017_val#563433",
+      "coco2017_val#564699"
+    ],
+    "a person riding a surf board on a wave": [
+      "coco2017_val#242918",
+      "coco2017_val#331102",
+      "coco2017_val#396635",
+      "coco2017_val#404656",
+      "coco2017_val#419751",
+      "coco2017_val#441444",
+      "coco2017_val#467382",
+      "coco2017_val#733192",
+      "coco2017_val#761121",
+      "coco2017_val#782131"
+    ],
+    "a person riding a wave on top of a surfboard.": [
+      "coco2017_val#464649",
+      "coco2017_val#552852",
+      "coco2017_val#552900",
+      "coco2017_val#556672"
+    ],
+    "a person riding skis on a snowy slope": [
+      "coco2017_val#58848",
+      "coco2017_val#605207",
+      "coco2017_val#83735"
+    ],
+    "a person riding skis on a snowy surface": [
+      "coco2017_val#122206",
+      "coco2017_val#327578",
+      "coco2017_val#346153",
+      "coco2017_val#363271"
+    ],
+    "a person that is cooking some food in a kitchen.": [
+      "coco2017_val#114846",
+      "coco2017_val#166557"
+    ],
+    "a person that is standing on a skateboard": [
+      "coco2017_val#651721",
+      "coco2017_val#825064"
+    ],
+    "a person with a skateboard on a street.": [
+      "coco2017_val#461975",
+      "coco2017_val#639517"
+    ],
+    "a picture of an open air zone that looks incredible.": [
+      "coco2017_val#605889",
+      "coco2017_val#607120"
+    ],
+    "a plate full of different types of foods.": [
+      "coco2017_val#178230",
+      "coco2017_val#507273"
+    ],
+    "a pregnant woman laying in bed reading a book": [
+      "coco2017_val#184168",
+      "coco2017_val#188842"
+    ],
+    "a public transit bus on a city street": [
+      "coco2017_val#341830",
+      "coco2017_val#441472",
+      "coco2017_val#500143",
+      "coco2017_val#501698",
+      "coco2017_val#604193",
+      "coco2017_val#604351",
+      "coco2017_val#759552"
+    ],
+    "a red fire hydrant sitting on the side of a road.": [
+      "coco2017_val#665554",
+      "coco2017_val#722171"
+    ],
+    "a row of motorcycles parked next to a building.": [
+      "coco2017_val#594436",
+      "coco2017_val#719676"
+    ],
+    "a stop sign on the side of a street.": [
+      "coco2017_val#361303",
+      "coco2017_val#431575"
+    ],
+    "a tennis player on a court with a racket": [
+      "coco2017_val#407014",
+      "coco2017_val#468327",
+      "coco2017_val#472976"
+    ],
+    "a tennis player swinging a racket at a ball": [
+      "coco2017_val#327690",
+      "coco2017_val#657955"
+    ],
+    "a tennis player taking a swing at a ball": [
+      "coco2017_val#114075",
+      "coco2017_val#285236"
+    ],
+    "a tennis player with a racket on a court": [
+      "coco2017_val#780165",
+      "coco2017_val#781173"
+    ],
+    "a train on a train track on an elevated bridge": [
+      "coco2017_val#380745",
+      "coco2017_val#380809"
+    ],
+    "a vase of flowers on a dining table.": [
+      "coco2017_val#578555",
+      "coco2017_val#829482"
+    ],
+    "a white plate of food on a table.": [
+      "coco2017_val#389506",
+      "coco2017_val#565710",
+      "coco2017_val#633196"
+    ],
+    "a white refrigerator freezer sitting inside of a kitchen.": [
+      "coco2017_val#507679",
+      "coco2017_val#636156"
+    ],
+    "a white toilet sitting in a bathroom next to a sink.": [
+      "coco2017_val#642340",
+      "coco2017_val#738684"
+    ],
+    "a woman holding a tennis racquet on a tennis court.": [
+      "coco2017_val#123887",
+      "coco2017_val#227791",
+      "coco2017_val#412078",
+      "coco2017_val#677922"
+    ],
+    "a woman in white dress playing a game of tennis.": [
+      "coco2017_val#208825",
+      "coco2017_val#383956"
+    ],
+    "a woman is skiing down a snowy hill.": [
+      "coco2017_val#577075",
+      "coco2017_val#611753"
+    ],
+    "a woman standing on a tennis court holding a racquet.": [
+      "coco2017_val#226287",
+      "coco2017_val#474787",
+      "coco2017_val#738842"
+    ],
+    "a wooden bench sitting next to a large body of water.": [
+      "coco2017_val#227630",
+      "coco2017_val#322509"
+    ],
+    "an individual is taken in this very picture.": [
+      "coco2017_val#613786",
+      "coco2017_val#615893"
+    ],
+    "i am unable to see an image above.": [
+      "coco2017_val#246706",
+      "coco2017_val#284953",
+      "coco2017_val#298225",
+      "coco2017_val#302530",
+      "coco2017_val#390637"
+    ],
+    "individual is doing something at the moment that is intriguing.": [
+      "coco2017_val#607448",
+      "coco2017_val#615829"
+    ],
+    "many people standing in a field flying kites.": [
+      "coco2017_val#230320",
+      "coco2017_val#302371"
+    ],
+    "people flying kites in a park on a windy day.": [
+      "coco2017_val#824136",
+      "coco2017_val#824139"
+    ],
+    "some baseball players are playing baseball on a field": [
+      "coco2017_val#488314",
+      "coco2017_val#594342"
+    ],
+    "the big ben clock tower towering over the city of london.": [
+      "coco2017_val#107446",
+      "coco2017_val#214152",
+      "coco2017_val#224305",
+      "coco2017_val#622819",
+      "coco2017_val#719555",
+      "coco2017_val#785279"
+    ],
+    "the train is traveling down the railroad tracks.": [
+      "coco2017_val#493875",
+      "coco2017_val#593762"
+    ],
+    "there is no image here to provide a caption for.": [
+      "coco2017_val#294154",
+      "coco2017_val#345379",
+      "coco2017_val#433639",
+      "coco2017_val#524626"
+    ],
+    "two people playing with an interactive gaming unit.": [
+      "coco2017_val#747237",
+      "coco2017_val#774267"
+    ],
+    "two people standing on a beach next to the ocean.": [
+      "coco2017_val#148929",
+      "coco2017_val#87776"
+    ],
+    "two stuffed animals posed together in black and white": [
+      "coco2017_val#480987",
+      "coco2017_val#823064"
+    ],
+    "two surfers riding the waves in the ocean.": [
+      "coco2017_val#328302",
+      "coco2017_val#329226"
+    ],
+    "two tennis players on a court with rackets": [
+      "coco2017_val#330778",
+      "coco2017_val#485210"
+    ]
+  },
+  "duplicate_caption_texts": {
+    "f2c3756bff8c43aca85cafb1d37d8d69385f1f4efb6d2956566a44efecb606c5": "a airplane that is flying through the sky",
+    "859d15834c8560286eee7068f80d040bc92f33e9c0060185a22bb48c41916d8c": "a baseball game in progress with the batter up to plate.",
+    "de17b4086744c6158ccabb3b1362fe2ba7eb7544d31023a58df9860ee8c5a7ec": "a baseball player holding a baseball bat during a game.",
+    "aa552eac2e44f7112a4611022bca2d2ed4e53311f53abf9f9656454fe52819ed": "a baseball player holding a bat next to home plate.",
+    "b11d8c4bf9a09843255ac511371fd07457258aa70d2b5ee53fecaa4f631d2494": "a baseball player holding a bat while standing on a field.",
+    "44f73315a34488e1a8f3ade06b2122688dd277cf1df9c76580b4dc9bba3c77dd": "a baseball player pitching a ball on top of a field.",
+    "acfa217ac8d41a621eb3350111d4f3650d96ff0e4bc5c56619e6fd518244f5db": "a baseball player pitching a baseball on a field.",
+    "ad4e208b5eb4a7b6b0ab1e122303d47eab91f9bed028765cabe633ec882ad159": "a bathroom scene with focus on the toilet.",
+    "6bbc4b3023bb8cdb146e7da0fbe8d4c483caac238ddfef4c8676dedfe22433bb": "a boy swinging a baseball bat at a ball.",
+    "cf722a840914e99bdcb57eb5fea70df9d2880d65f31a00f05997acd52d80e486": "a car is driving through a flooded street.",
+    "00badebc50c7ab9d61baf6dd06d1da7d1339449f99cd39a32a244e9c6059a8db": "a cat sitting in front of a flat screen tv.",
+    "ce40a702955123fc8fceaa89081bfa69d51bffc91e82bafab018145fbd544114": "a cat that is laying down on a chair.",
+    "a330a0187c596640e22cca0276d3d2997cd511666d10c6cf3b93fd7b25f30225": "a close up of a plate of food with broccoli",
+    "e9dc7061dd141429a0d3938f84d580cf78dd160d8e8ad4c37e339515cd2d45b2": "a computer desk with two monitors and a laptop.",
+    "a2e2e0eaa3ba875538ac9f156edb5a664d8b2ddf18ac422e2eef9046c512c703": "a couple of buses that are parked next to each other",
+    "4c514981e86d95cddb7821ba9a100833cb4b12d04f049dbd947a624b15205ce5": "a couple of giraffe standing next to each other.",
+    "f434cb081d538dd0f9c1252598149f351d44447045cac4bbf54005245a3b3503": "a crowd of people standing on a field flying kites.",
+    "c7993d1e5b5305452501a64c952bf2777daa88688ef037dbaaecfe6108ccb484": "a glass vase with some flowers inside of it",
+    "78615184e4f9205e95d1adb4a86e7b39169c2a644cebacbdda6e54b5bea91c6a": "a group of dogs that are standing in the grass.",
+    "a8e9738fc749d2f5fe5e3929561a80314b2903a0ce99d3c793b66f48cf5bce03": "a group of giraffes that are standing in the grass.",
+    "f273bbe63c3a1e02761f6275621833facd85ec747cb93db004e2a130d1c66ba0": "a group of men on a field playing baseball.",
+    "3eeb88ffa3c9711900d46fbae0abe0b3400b20f3cee1a9c61c23ded0ae5a3967": "a group of men playing a game of frisbee.",
+    "4d31d2913c30b134aff094cd6bb50f67994dbf6867b70004035c48a9cf93d16b": "a group of people flying kites on top of a sandy beach.",
+    "eea42d3485368d06f0af87ff99f2e1466ff8b6b6482c0fce45db848f2885f747": "a group of people riding skis on a snowy surface",
+    "ad22a3efff65c4f2d4bf45fbeacb93ace7dfbdeb72554170aaaa7fe3c06ce557": "a group of people sitting around a table.",
+    "e2452e032be5d8b4e2090d9aedf705119d154709c30036553ea9a2c4082ce9ae": "a group of people sitting at a table.",
+    "e0d9b3c6eec21593bc20adfabf4f52a474596977b06142d24e379c05e24ad13c": "a group of people standing in a room.",
+    "cbbf6fe817b9631824e5d9f0d0c55d4052b3e73e1004be172a9c432d495c39e1": "a group of young children sitting next to each other.",
+    "80f4a76c848d41b976d8f72cda1dcbbdd86623766f235c1a4d92047cef48a1a7": "a guy on a skate board high in the air.",
+    "b7b8a091b610c4a1a18f859617c6690e54f39868a37b89f5d927391fa2324e17": "a herd of cattle grazing on a lush green field.",
+    "3d3bd3e009d2165d7323877bb1fb4fa0cffdb854350096fef1561192d2482593": "a herd of sheep grazing on a lush green field.",
+    "d72df7a17202df4b112f8d8324ca2798bdfe48de3728e764b2b748259678f214": "a laptop computer sitting on top of a desk.",
+    "877a9fdbf9805e3e14d6aaebafb91c2b6e38a5ba35bac9397d3bb0af9ae3967b": "a laptop computer sitting on top of a wooden desk.",
+    "b0471fb815c85b8360114347c90f7def7a6b7d9568f4484cb57d8aa47e534903": "a laptop computer sitting on top of a wooden table.",
+    "574162b58edbad616d6d2e5d94c741b4d26d7aa21086134233f89f8139be988b": "a large airplane is ascending from the runway.",
+    "e68cd843d7f177f51a9149f1ca0198df78b71fe8bab722bd37376a41b80b18b4": "a large clock mounted to the side of a building.",
+    "461fabe7ec1ef565c3f2776c93ada7a8bf7620e7e454378d8c460f9aa9ea4218": "a large jetliner sitting on top of an airport runway.",
+    "8cb001bed27ec9845c892aeae3850cad9873a23e5c5f8af51a96897cd4ee3c6b": "a large long train on a steel track.",
+    "26b63816f13c7caf4b82567b149b519ac90b64553a9f53f41b5bb63b5d76d284": "a living room filled with furniture and decor.",
+    "70061cb6c1d36c7193579c86b458ae80f9fd6c47e6f7b4949df86ba45ca4ca27": "a man attempts a trick after riding off of a low ramp.",
+    "0d3dc0c91391cc2968af2fa2fa74e4f0e46193ca6a9d07518471c68a4f253b60": "a man blowing out candles on a birthday cake.",
+    "73eddcb49dffe31884e6fe59aa1f842897dfdae28a544582ca450f04bbc2c9be": "a man blowing out candles on a cake.",
+    "66fd2481af5003afdf97e4a3727194beb7473da18f07fe125fa62aad7df6c6f8": "a man flying through the air on top of a skateboard.",
+    "1e1570dd65eec5e7c0f95aabb0bcb95b883fb1bc8fdad51af176d320a1ae2583": "a man flying through the air while riding a skateboard.",
+    "ea8ce3bdd04e694e884868fda7eb6bcb804c84c375c057f49e8b25e67819a2f9": "a man flying through the air while riding a snowboard.",
+    "824532fe04c3b9b3bc8ef4f7e6bef5752fcc91ed73d2b714dfe31f7ecb1466f3": "a man flying through the air while riding skis.",
+    "139bd52f94bff187ad3e0523404968b8edc607e332806234ad9bf364deeb00e3": "a man holding a tennis racquet on a court.",
+    "47353ca7424f6361a2ee613f1e4d6e939dd4b837326268c078dbbc041c88dd99": "a man holding a tennis racquet on a tennis court.",
+    "7e9e9ad6abad56dd5f3b1549cf408ab943508d33a5a230f21bb5d966029b9242": "a man holding a tennis racquet on top of a tennis court.",
+    "58bb9c18196b42c48ceec599f04f383b85b678c9d8a5ee3571680ff18fbf5569": "a man holding an umbrella in a hallway.",
+    "0a20c94bd1e154af604a096b0ad935760ab5412f88c00bc9febb7256ee29e8b1": "a man in black shirt doing a trick on a skateboard.",
+    "b2f6d3c3559b2c2e81d137886722c0786da05fe52593835c6ae4e2233b2f149b": "a man in white shirt and shorts playing a game of tennis.",
+    "9744be278c0f11c50270bc12349da50242f363c59f8bed95e5455b93c649d7c1": "a man is doing a trick on a skateboard.",
+    "cc6dac99fc296f5805c5e5dfff71c4cbd7f9837090e23cd9246d9bb863843d8b": "a man is doing tricks on a skateboard.",
+    "273dd961750639de91edafd070e78662bec785710d789737a7a250bc20656ab6": "a man is flying a kite at the beach.",
+    "d4bb76b40a8d356cc257668a251d6c104f38803763790b6240f4c788610c3eb1": "a man on a court swinging a tennis racket.",
+    "f47738a025be8f353a9a566760033a13d1b2b6201a77f3a8c09a7adee60a9d61": "a man on a court with a tennis racket.",
+    "10c4cceaf45d9ae5629cd9af91330170568752aea16b51fadc5afa90fb8811a8": "a man on a surfboard riding a wave in the ocean.",
+    "cca0ed3ac437f285f53b956fe2eec266f097c4949d1bc3f4009741f0932050c9": "a man on a surfboard riding a wave.",
+    "c63cd8dbac2669517dd5409a003028625282eec9f8ffcc45d495b5a57e9740ed": "a man riding a skateboard down a cement ramp.",
+    "b7a70790c265745121f2b90964e649fa87dc00c59c4b22470701dbcac46cad0a": "a man riding a skateboard up the side of a ramp.",
+    "a4e6e007375bf6d123395c4afbbadcd4fb037dbddee97a189ba80e65de3c3e1c": "a man riding a snowboard down a snow covered slope.",
+    "3dba4661b4074f91fc88127f3ffd12cc5f85d8d9087ad2f1c3920a3663170829": "a man riding a surfboard on a wave in the ocean.",
+    "fc044960cd35e30f33ac67e633eeff9472efc4605525db52e2dabd7cbbac113e": "a man riding a wave on a surfboard in the ocean.",
+    "c38af2d1e526902d776b5008080d7d9b10ae47baaa0531f9b50b5fd2c0b6b68b": "a man riding a wave on a surfboard.",
+    "7c275652eacf001001c7abc5eb4400e85f9c6f2c0a26da7fb6c5eae31e311ad2": "a man riding a wave on top of a surfboard.",
+    "87907894ef4f2cd0995b3dfb046259b94a52ec8e1f28481d3bf5536b43986d45": "a man riding on the back of a brown horse.",
+    "3f7cda7c659672523470bd56011307d6b3b332e91ff423d757fbc8981fe8eee2": "a man riding on the back of a motorcycle.",
+    "b38166d953f1cfa665cfce88697d4a0b32b7676657c872853d55bac6eb5ab659": "a man riding skis down a snow covered slope.",
+    "94bf1bdb3783b3bcd6a5df974daabca387d9bb9024381182780af055f8863f61": "a man riding skis while flying through the air.",
+    "3224660369d757d1d0e4462eb62301acbeab393551bc3fc01b2c0c17828fd0a9": "a man standing next to a parked motorcycle.",
+    "f15e67957c2f317b57212755e05a90a07aeb06fbd9cb9cfbd10bfb3f675a0a30": "a man standing on a tennis court holding a racquet.",
+    "0926160079392a07f6adea8c472596a365792481a33009e750dc8122abfcb9d0": "a man swinging a tennis racquet at a ball on a court.",
+    "a87a0763e4b18c2f898f7232faddda7c1bd4274f08185040d6dbd0d339fdf06c": "a man taking a swing at a tennis ball",
+    "bbb30cf6c62cf6547c2fdf60a4565e3fd5abf9f465f12240ef70e98aba31a09c": "a man that is on a surfboard in the water.",
+    "ba4b0ef4491d83dc072fc5424c547c32cd808c768d091d5bf30184e807bec43c": "a man that is on a tennis court with a racquet.",
+    "2713a53ce9500b446d208e98e49220f2764bf117990bafd0c77431aa55ebd648": "a microwave oven with some food inside of it",
+    "104a228c7a3ef8ef9f8201e866d1ecef234cc84ec0f8ff932f88bbc276e941da": "a newly married couple cutting their wedding cake",
+    "d221a3624d2ee6fa5a556f7e0c0579a4fd7880f552cfe2a882cd0052f12774fd": "a number of baseball players on a field",
+    "b2ff5369a8d3f6855d766a0f5f1e75e4ce78dfc7d92bbdffc2f8d89788ea5806": "a number of people riding skis on a snowy surface",
+    "24cf21f74459d999545766c568b153a4cf0a3dff9163fcf73f9f87fa50fbc451": "a passenger train pulls into a train station.",
+    "f5a8a1e99308d782d1370e584dc81e4feddf770779accf81c3fd79c6be4fe801": "a person doing a trick on a skateboard",
+    "13153d59022f35c4c959b0ffc073475c9180a98325976c71c29a841d5b7f5375": "a person in a wetsuit riding a wave on a surfboard.",
+    "8023f8c87ef072f9bebd6ede7c47bde7c92c3bb3d014ddedbcca9c12524eb76a": "a person in the snow on some skis.",
+    "bdf11dd3bd53e7ebab2bcfe2094bfd6f691464aa8599f7a5880b0e5325ace170": "a person jumping a skate board in the air",
+    "9b09466a814ae25718022c0dd038a9a031c239cb3e8290d1c4e5d4b4e9af2bc2": "a person jumping a snow board in the air",
+    "b51b83f4b9605682dbae833e16d4d217d09b3f166d7496cc440bfcb2bdbd3f66": "a person jumping up in the air on a skateboard.",
+    "b9f3f49ad65a281530109f5ee8c841b22690bd7d70bfa2bc640c38fb4f75500c": "a person on a court with a tennis racket.",
+    "3acf3f0558796c06b85032beb34cb539f4c5f48945848fd115939c5ac18dfd4b": "a person on a skateboard on a street.",
+    "048c1a21392d973033e89c578a234e7a1c241c979af887f1fac6a4d88c869f5b": "a person on a surf board riding a wave.",
+    "3d1452dce2626678b468dd86f6525cafb4fb5630bdb1708b126e3bd87fb7c0f3": "a person on a surfboard in the water.",
+    "73186b8dd783de5a2837f641f984beef537bd873b6c8d3234e7e03e834edc959": "a person riding a surf board on a wave",
+    "54c8287d21502fb20a044eb7d27bd17018542786689eda750cf2cae9e2d831f1": "a person riding a wave on top of a surfboard.",
+    "87364396398324436044a6a7f11188c3d51f4384faa28256a16e6c89f6912dcf": "a person riding skis on a snowy slope",
+    "2311f5c58037adfe10e9cf09540aee1cba8bd0e8653025ca392ad3a191b6f768": "a person riding skis on a snowy surface",
+    "96ac2ef6a94fd333b234ae7de137aecfd8fd7f70558e26496d1aa1aa3bd7e170": "a person that is cooking some food in a kitchen.",
+    "37fe2123b17b0a6972d74a253ba09375735b2159cea0837ca719607468ca839a": "a person that is standing on a skateboard",
+    "371a686c5fb79610d8eb4eeb02039a4ba14d82ee07f9d7e24c220da458c495db": "a person with a skateboard on a street.",
+    "d27489b5d071bc2de64822b804c92b76f0d729b514fe357cbff7385f1acfe30a": "a picture of an open air zone that looks incredible.",
+    "2fe119ff14be47b9d8550a614cadc437b55e71ed83e18dad2dc56eb08a83ea03": "a plate full of different types of foods.",
+    "5bd6e1aa543c31da389ff2ff5250a0fcbb6b8253cecf5176670b8dc2fb51eb57": "a pregnant woman laying in bed reading a book",
+    "f4fd5daf3ff40f290f821dbfe49266daf3b92d1a24b2b5c0beba3ad976e367b4": "a public transit bus on a city street",
+    "8e0866d182cc849bc6e2101284f320ddf7f72a7983a2885e8ae707850f2e29b0": "a red fire hydrant sitting on the side of a road.",
+    "efb869f16945f230989b24ea4df7b6f369f7acb0f40410afd04b84a7bed0b166": "a row of motorcycles parked next to a building.",
+    "7fb1f8323e970fe44e8e152aa49a842c7077116100561c4216b4ca94b92dbc3e": "a stop sign on the side of a street.",
+    "811c51b388266b390c6b7450d8c52eab859f4e9bb9f4cdaf27a6fbb0cb90e3e9": "a tennis player on a court with a racket",
+    "79ee42422fa0011e82f85127e11d247314e875b8b8583675c63bff194d07c1e9": "a tennis player swinging a racket at a ball",
+    "a170a3542dd3b06abf5b2420d4eaf4bcb822ade90daa5da1f57e4b2f0540bf06": "a tennis player taking a swing at a ball",
+    "1fc92969b412e46d678774db720e5bde8b136a1d4ec0080cf59c2ca315bb954c": "a tennis player with a racket on a court",
+    "6a3b32849a1b7cc6ed61683c8650dfed41548c356a1a085cb9e18d54cafddc63": "a train on a train track on an elevated bridge",
+    "9b24f8ce8705d0548514c33c83259f2c497e524fd3a9875936f50803cee2512e": "a vase of flowers on a dining table.",
+    "c47872e033be1c1d45f0a4b7f762637aa34c4c642283310b9950fff3c9f9b2fb": "a white plate of food on a table.",
+    "db6137f295de0dab5226b61e51cca0c8b0b6586b82db93b6c066c675af65071e": "a white refrigerator freezer sitting inside of a kitchen.",
+    "53ffb381cc07997f036a44895033bfe98ed06fd67c8e9be79ced710ce562fbd4": "a white toilet sitting in a bathroom next to a sink.",
+    "f7b88096131b4102792c36b332d079db78b1e9246efd3e1ff3c24ee6f1d28f78": "a woman holding a tennis racquet on a tennis court.",
+    "5e31bd8ce62ba4691c8040592d5edc0e64ec1beb1fe85302f9c4caf73a026de2": "a woman in white dress playing a game of tennis.",
+    "42f07ad254902589729d799f37142ec7cfbb00f184e2a722bd5a2af3c56dbf53": "a woman is skiing down a snowy hill.",
+    "d9b93f0444311b516d62dab993c7747fc4505a29c84c8d86b07429ffbf1c18d8": "a woman standing on a tennis court holding a racquet.",
+    "b63317e1316fbfa4df3a83a1781ab4bbe094fcd87cc283b71546bd6a48ee02f9": "a wooden bench sitting next to a large body of water.",
+    "083a1b7405a815170739e0633d5f2a215531b73562622430219790e2682532bb": "an individual is taken in this very picture.",
+    "57ff8c11cbd1e41b8f8e1d5bd1a0fe895464f6ee3bd4c8249b276cf54c183faf": "i am unable to see an image above.",
+    "58b56963f4da71bf51319f408547863d9d1949c170aa4186945ff5bf94c42348": "individual is doing something at the moment that is intriguing.",
+    "7749695a6fdede259329e2a9887d26af55094aa3d06026048adcd627e4bc8a0b": "many people standing in a field flying kites.",
+    "c58601f888e104542b2fde5a8ec7c2289ee27b601a4fa7d271155de45d20c398": "people flying kites in a park on a windy day.",
+    "5b346fc5dcf1b9f01452e346f2c8aac14514cf7e453d8bdd07401e4c742bd41a": "some baseball players are playing baseball on a field",
+    "e52ec936517fcca4d25f3d9fc28ad5dabcb9d9e0801670fdc607cd803d43d513": "the big ben clock tower towering over the city of london.",
+    "46d0be195c83ca9ff39dd77c0799157d1ea46cac62b996023d488cf1011cbeff": "the train is traveling down the railroad tracks.",
+    "a5cc153d993a3bf6cdce2b632516f4a50014e860ea59cdc13763a9a4ff0f0828": "there is no image here to provide a caption for.",
+    "e5b72e94a0a8b42d5be2178f1afe6994152450c23fabd6700aac4d5bcb25c1c9": "two people playing with an interactive gaming unit.",
+    "f3369e9f08971473f20657240bb22c8fbe11431e877d78fd8e0bcaafc5c53b42": "two people standing on a beach next to the ocean.",
+    "c98d1b774e686bc0208340f9f831cdf1457c706328489d795b125a2027b2bdbc": "two stuffed animals posed together in black and white",
+    "fc99a5f5f4cd5ce1b8250439830cf1b88cf5eacf125b71b0ca75cba9e1371851": "two surfers riding the waves in the ocean.",
+    "4982fcc6fea56c27c78165ce0738d175619ddbe1983eab98f7cdc04a3e03e0be": "two tennis players on a court with rackets"
+  },
+  "records_without_source_image_id": [],
+  "errors": [],
+  "warnings": [
+    "133 normalized duplicate caption groups detected"
+  ]
+}
