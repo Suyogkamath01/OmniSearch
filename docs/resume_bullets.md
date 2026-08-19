@@ -1,0 +1,6 @@
+# Resume bullets
+
+- Built an end-to-end CLIP-based multimodal retrieval system with text→image and image→text evaluation over an image-grouped COCO protocol.
+- Fine-tuned the full CLIP model and reached 0.8263 text→image R@1 and 0.9880 R@5 on the retained held-out test split.
+- Compared LoRA, hard-negative training, FAISS Flat, ANN alternatives, reranking, robustness, confidence, and explanation methods; disabled the reranker after it degraded every reported retrieval metric.
+- Packaged the validated model, cache, and indexes behind FastAPI and Streamlit, then measured an 11.139-second native MPS cold start and 12.31 ms warm mean text→image latency.
