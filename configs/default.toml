@@ -1,0 +1,275 @@
+# Active benchmark configuration. Historical Flickr30k manifests and artifacts
+# remain preserved; the primary accessible benchmark is official COCO val2017.
+
+[project]
+name = "omnisearch"
+schema_version = 1
+
+[reproducibility]
+seed = 42
+deterministic = true
+split_group = "image_id"
+record_git_revision = true
+
+[dataset]
+id = "coco2017_val"
+dataset_family = "MS COCO"
+dataset_version = "2017-val-captions"
+status = "official_images_and_captions_acquired_verified"
+metadata_source_url = "http://images.cocodataset.org/annotations/annotations_trainval2017.zip"
+official_data_page = "https://cocodataset.org/dataset/download.htm"
+terms_url = "https://cocodataset.org/dataset/termsofuse.htm"
+image_archive_url = "http://images.cocodataset.org/zips/val2017.zip"
+image_root = "data/raw/coco2017/val2017"
+caption_annotation_path = "data/raw/coco2017/annotations/captions_val2017.json"
+split_protocol = "deterministic_sha256_image_group_split_seed_42"
+download_policy = "explicit_only"
+caption_relevance = "all_captions_for_image_are_relevant"
+tier1_image_records = 100
+tier2_image_records = 1000
+tier3_image_records = 5000
+historical_dataset = "flickr30k"
+
+[compute]
+device = "auto"
+batch_size = 16
+num_workers = 0
+mixed_precision = false
+max_image_size = 224
+
+[paths]
+data_root = "data"
+raw_dir = "data/raw"
+interim_dir = "data/interim"
+processed_dir = "data/processed"
+artifact_dir = "artifacts"
+experiment_dir = "artifacts/experiments"
+metric_dir = "artifacts/metrics"
+model_dir = "artifacts/models"
+log_dir = "artifacts/logs"
+
+[eda]
+short_caption_words = 3
+long_caption_words = 30
+small_image_dimension = 64
+large_file_bytes = 10000000
+sample_size = 12
+near_duplicate_status = "not_evaluated_no_perceptual_hash"
+
+[phase3]
+text_split = "test"
+max_text_queries = 256
+top_k = 10
+tfidf_ngram_min = 1
+tfidf_ngram_max = 1
+tfidf_min_df = 1
+tfidf_max_df = 1.0
+tfidf_sublinear_tf = true
+bm25_k1 = 1.5
+bm25_b = 0.75
+image_bins = 8
+image_grid_size = 2
+image_query_limit = 64
+
+[phase4]
+model_id = "openai/clip-vit-base-patch32"
+device = "auto"
+batch_size = 8
+text_max_length = 77
+text_max_items = 256
+image_max_items = 1000
+cache_enabled = true
+
+[phase6]
+phase5_artifact_dir = "artifacts/coco/phase5"
+device = "auto"
+batch_size = 8
+split = "test"
+text_max_queries = 256
+top_k = 10
+bootstrap_resamples = 200
+text_models = ["minilm_mean", "distilbert_mean"]
+vision_models = ["resnet18_native", "vit_base_native"]
+run_clip_components = true
+
+[phase7]
+manifest = "data/processed/coco2017_val_split_manifest.json"
+image_root = "data/raw/coco2017/val2017"
+model_id = "openai/clip-vit-base-patch32"
+device = "auto"
+batch_size = 2
+gradient_accumulation_steps = 4
+num_workers = 0
+epochs = 1
+learning_rate = 1e-6
+weight_decay = 0.01
+warmup_steps = 0
+max_grad_norm = 1.0
+text_max_length = 77
+precision = "fp32"
+selection_metric = "mean_recall_at_5"
+early_stopping_patience = 2
+bootstrap_resamples = 200
+max_train_images = 800
+max_validation_images = 100
+max_test_images = 100
+
+[phase9]
+manifest = "data/processed/coco2017_val_split_manifest.json"
+image_root = "data/raw/coco2017/val2017"
+model_id = "openai/clip-vit-base-patch32"
+phase7_artifact_dir = "artifacts/phase7"
+phase8_artifact_dir = "artifacts/phase8"
+image_validation_path = "artifacts/coco_phase1/validation_images.json"
+device = "auto"
+batch_size = 2
+gradient_accumulation_steps = 4
+num_workers = 0
+epochs = 1
+learning_rate = 1e-6
+weight_decay = 0.01
+warmup_steps = 0
+max_grad_norm = 1.0
+text_max_length = 77
+precision = "fp32"
+selection_metric = "mean_recall_at_5"
+early_stopping_patience = 2
+bootstrap_resamples = 200
+mining_split = "train"
+mining_strategy = "static_frozen_clip_top5_hash_sample"
+candidate_pool_size = 5
+hard_negative_ratio = 0.5
+potential_false_negative_similarity_threshold = 0.85
+max_train_images = 800
+max_validation_images = 100
+max_test_images = 100
+
+[phase8]
+manifest = "data/processed/coco2017_val_split_manifest.json"
+image_root = "data/raw/coco2017/val2017"
+model_id = "openai/clip-vit-base-patch32"
+phase7_artifact_dir = "artifacts/phase7"
+device = "auto"
+batch_size = 2
+gradient_accumulation_steps = 4
+num_workers = 0
+epochs = 1
+learning_rate = 1e-4
+weight_decay = 0.01
+warmup_steps = 0
+max_grad_norm = 1.0
+text_max_length = 77
+precision = "fp32"
+selection_metric = "mean_recall_at_5"
+early_stopping_patience = 2
+bootstrap_resamples = 200
+lora_rank = 8
+lora_alpha = 16
+lora_dropout = 0.05
+lora_target_modules = ["q_proj", "v_proj"]
+lora_bias = "none"
+train_logit_scale = true
+max_train_images = 800
+max_validation_images = 100
+max_test_images = 100
+
+[phase10]
+manifest = "data/processed/coco2017_val_split_manifest.json"
+image_root = "data/raw/coco2017/val2017"
+phase7_checkpoint = "artifacts/phase7/best_checkpoint.pt"
+model_id = "openai/clip-vit-base-patch32"
+device = "auto"
+batch_size = 8
+text_max_length = 77
+precision = "fp32"
+seed = 42
+tier_sizes = [100, 1000, 5000]
+top_k = 10
+warmup_queries = 5
+latency_repeats = 3
+latency_query_limit = 128
+selection_fidelity_threshold = 0.99
+hnsw_m = 16
+hnsw_ef_construction = 100
+hnsw_ef_search_values = [8, 32]
+ivf_nprobe_values = [1, 8]
+
+[phase11]
+manifest = "data/processed/coco2017_val_split_manifest.json"
+image_root = "data/raw/coco2017/val2017"
+phase7_checkpoint = "artifacts/phase7/best_checkpoint.pt"
+phase10_embedding_cache = "artifacts/phase10/embedding_cache"
+model_id = "openai/clip-vit-base-patch32"
+device = "auto"
+seed = 42
+batch_size = 128
+epochs = 3
+learning_rate = 0.001
+weight_decay = 0.0001
+margin = 0.1
+hidden_dim = 64
+candidate_depths = [10, 25, 50]
+selection_metric = "mean_mrr"
+bootstrap_resamples = 200
+max_train_images = 800
+latency_query_limit = 128
+latency_repeats = 3
+warmup_queries = 5
+tier_sizes = [1000, 5000]
+
+[phase12]
+manifest = "data/processed/coco2017_val_split_manifest.json"
+image_root = "data/raw/coco2017/val2017"
+phase7_checkpoint = "artifacts/phase7/best_checkpoint.pt"
+phase10_embedding_cache = "artifacts/phase10/embedding_cache"
+model_id = "openai/clip-vit-base-patch32"
+device = "auto"
+seed = 42
+batch_size = 128
+text_max_length = 77
+alpha_values = [0.25, 0.50, 0.75]
+selection_metric = "mean_mrr"
+bootstrap_resamples = 200
+top_k = 10
+latency_query_limit = 128
+latency_repeats = 3
+warmup_queries = 5
+tier_sizes = [1000, 5000]
+qualitative_examples = 4
+
+[phase12b]
+annotations = "data/raw/circo/annotations/val.json"
+gallery_info = "data/raw/coco2017_unlabeled/annotations/image_info_unlabeled2017.json"
+image_root = "data/raw/coco2017_unlabeled/unlabeled2017"
+phase7_checkpoint = "artifacts/phase7/best_checkpoint.pt"
+model_id = "openai/clip-vit-base-patch32"
+device = "auto"
+seed = 42
+batch_size = 128
+text_max_length = 77
+alpha_values = [0.25, 0.50, 0.75]
+selection_metric = "map_at_10"
+selection_fraction = 0.50
+metric_ks = [5, 10, 25, 50]
+top_k = 50
+bootstrap_resamples = 200
+latency_query_limit = 128
+latency_repeats = 3
+required_archive_bytes = 20126613414
+expected_extracted_bytes = 20102247620
+expected_gallery_file_count = 123404
+expected_embedding_dimension = 512
+required_archive_url = "http://images.cocodataset.org/zips/unlabeled2017.zip"
+annotation_repository_commit = "ba9a9346a8840513bc5d0beccdaf6dd0f5c3c6fa"
+
+[phase15]
+manifest = "data/processed/coco2017_val_split_manifest.json"
+image_root = "data/raw/coco2017/val2017"
+phase7_artifact_dir = "artifacts/phase7"
+model_id = "openai/clip-vit-base-patch32"
+device = "auto"
+seed = 42
+batch_size = 8
+bootstrap_resamples = 200
+test_image_groups = 100
+shift_target_groups = 5
