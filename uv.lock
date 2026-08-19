@@ -1090,12 +1090,16 @@ version = "0.1.0"
 source = { editable = "." }
 dependencies = [
     { name = "faiss-cpu" },
+    { name = "fastapi" },
+    { name = "httpx" },
     { name = "numpy" },
     { name = "pillow" },
+    { name = "python-multipart" },
     { name = "safetensors" },
     { name = "streamlit" },
     { name = "torch" },
     { name = "transformers" },
+    { name = "uvicorn", extra = ["standard"] },
 ]
 
 [package.optional-dependencies]
@@ -1179,12 +1183,14 @@ requires-dist = [
     { name = "faiss-cpu", marker = "extra == 'deployment'", specifier = ">=1.8,<2" },
     { name = "faiss-cpu", marker = "extra == 'retrieval'", specifier = ">=1.8,<2" },
     { name = "faiss-cpu", marker = "extra == 'test'", specifier = ">=1.8,<2" },
+    { name = "fastapi", specifier = ">=0.115,<1" },
     { name = "fastapi", marker = "extra == 'api'", specifier = ">=0.115,<1" },
     { name = "fastapi", marker = "extra == 'app'", specifier = ">=0.115,<1" },
     { name = "fastapi", marker = "extra == 'deployment'", specifier = ">=0.115,<1" },
     { name = "fastapi", marker = "extra == 'test'", specifier = ">=0.115,<1" },
     { name = "hnswlib", marker = "extra == 'retrieval'", specifier = ">=0.8,<1" },
     { name = "hnswlib", marker = "extra == 'test'", specifier = ">=0.8,<1" },
+    { name = "httpx", specifier = ">=0.27,<1" },
     { name = "httpx", marker = "extra == 'api'", specifier = ">=0.27,<1" },
     { name = "httpx", marker = "extra == 'deployment'", specifier = ">=0.27,<1" },
     { name = "httpx", marker = "extra == 'test'", specifier = ">=0.27,<1" },
@@ -1204,6 +1210,7 @@ requires-dist = [
     { name = "pillow", marker = "extra == 'test'", specifier = ">=10.4,<12" },
     { name = "pytest", marker = "extra == 'dev'", specifier = ">=8.3,<9" },
     { name = "pytest", marker = "extra == 'test'", specifier = ">=8.3,<9" },
+    { name = "python-multipart", specifier = ">=0.0.9,<1" },
     { name = "python-multipart", marker = "extra == 'api'", specifier = ">=0.0.9,<1" },
     { name = "python-multipart", marker = "extra == 'deployment'", specifier = ">=0.0.9,<1" },
     { name = "python-multipart", marker = "extra == 'test'", specifier = ">=0.0.9,<1" },
@@ -1232,6 +1239,7 @@ requires-dist = [
     { name = "transformers", marker = "extra == 'research'", specifier = ">=4.45,<6" },
     { name = "types-pyyaml", marker = "extra == 'dev'", specifier = ">=6.0,<7" },
     { name = "types-pyyaml", marker = "extra == 'test'", specifier = ">=6.0,<7" },
+    { name = "uvicorn", extras = ["standard"], specifier = ">=0.30,<1" },
     { name = "uvicorn", extras = ["standard"], marker = "extra == 'api'", specifier = ">=0.30,<1" },
     { name = "uvicorn", extras = ["standard"], marker = "extra == 'app'", specifier = ">=0.30,<1" },
     { name = "uvicorn", extras = ["standard"], marker = "extra == 'deployment'", specifier = ">=0.30,<1" },
