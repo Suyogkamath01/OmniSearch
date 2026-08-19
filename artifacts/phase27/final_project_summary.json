@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "project": "OmniSearch",
+  "description": "OmniSearch is a multimodal text/image retrieval system built around CLIP representations, full fine-tuning, cached embeddings, exact FAISS retrieval, a FastAPI service, and a Streamlit demo.",
+  "problem": "Retrieve relevant images from text and relevant captions from images while keeping the evaluation and deployment path reproducible.",
+  "final_system": "Phase 7 full-FT CLIP -> normalized 512D float32 embeddings -> FAISS Flat exact search -> FastAPI/RetrievalService -> Streamlit UI.",
+  "final_status": "Phases 1–27 COMPLETE; Phase 12B PARTIAL / NON-BLOCKING / STORAGE-DEFERRED.",
+  "measured_outcome": "Held-out COCO text→image R@1 0.8263 and R@5 0.9880; native MPS deployment reached ready in 11.139 seconds.",
+  "student_takeaway": "The main lesson was that careful evaluation and negative results mattered more than adding another component: exact search and the simple dual-encoder path were better final choices than the tested reranker and approximate defaults."
+}
