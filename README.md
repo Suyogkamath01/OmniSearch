@@ -2,6 +2,12 @@
 
 > A reproducible image-text retrieval system built around fine-tuned CLIP, exact FAISS search, and a local FastAPI/Streamlit demo.
 
+![Python](https://img.shields.io/badge/Python-3.12%2B-3776AB?logo=python&logoColor=white)
+![FastAPI](https://img.shields.io/badge/API-FastAPI-009688?logo=fastapi&logoColor=white)
+![Kafka](https://img.shields.io/badge/Streaming-Kafka-231F20?logo=apachekafka&logoColor=white)
+![Spark](https://img.shields.io/badge/Processing-Spark-E25A1C?logo=apachespark&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-green.svg)
+
 OmniSearch maps images and captions into one shared embedding space and
 supports text-to-image and image-to-caption retrieval. It is designed as a
 serious technical portfolio project: the evaluation unit is explicit, splits
