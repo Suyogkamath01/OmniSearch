@@ -9,7 +9,15 @@ description = "Research scaffold for multimodal semantic retrieval experiments."
 readme = "README.md"
 requires-python = ">=3.12,<3.14"
 authors = [{ name = "OmniSearch" }]
-dependencies = []
+dependencies = [
+  "faiss-cpu>=1.8,<2",
+  "numpy>=2.0,<3",
+  "Pillow>=10.4,<12",
+  "safetensors>=0.4,<1",
+  "streamlit>=1.38,<2",
+  "torch>=2.5,<3",
+  "transformers>=4.45,<6",
+]
 
 [project.optional-dependencies]
 # Installed only when the corresponding phase is explicitly started.
