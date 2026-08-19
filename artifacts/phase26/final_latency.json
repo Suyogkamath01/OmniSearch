@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "passed": true,
+  "measurement": "native deployed API warm requests; cold start excluded",
+  "device": "mps",
+  "text_to_image": {
+    "preprocessing_ms": {
+      "count": 10,
+      "mean_ms": 0.00014570032362826169,
+      "median_ms": 0.00014549914340022951,
+      "p95_ms": 0.00016700141713954508,
+      "min_ms": 0.00012500095181167126,
+      "max_ms": 0.00016700141713954508
+    },
+    "query_encoding_ms": {
+      "count": 10,
+      "mean_ms": 11.91942490004294,
+      "median_ms": 11.253291500906926,
+      "p95_ms": 14.963374997023493,
+      "min_ms": 9.293708000768675,
+      "max_ms": 14.963374997023493
+    },
+    "search_ms": {
+      "count": 10,
+      "mean_ms": 0.38395430019591004,
+      "median_ms": 0.3657085017039208,
+      "p95_ms": 0.49287499859929085,
+      "min_ms": 0.3316670008643996,
+      "max_ms": 0.49287499859929085
+    },
+    "total_server_ms": {
+      "count": 10,
+      "mean_ms": 12.309004100461607,
+      "median_ms": 11.624708500676206,
+      "p95_ms": 15.463332998479018,
+      "min_ms": 9.645291997003369,
+      "max_ms": 15.463332998479018
+    },
+    "client_wall_ms": {
+      "count": 10,
+      "mean_ms": 13.719866600513342,
+      "median_ms": 13.382770999669447,
+      "p95_ms": 17.397125000570668,
+      "min_ms": 10.904416001721984,
+      "max_ms": 17.397125000570668
+    }
+  },
+  "image_to_text": {
+    "preprocessing_ms": {
+      "count": 10,
+      "mean_ms": 2.702062500247848,
+      "median_ms": 2.6682080006139586,
+      "p95_ms": 2.9715410018980037,
+      "min_ms": 2.593624998553423,
+      "max_ms": 2.9715410018980037
+    },
+    "query_encoding_ms": {
+      "count": 10,
+      "mean_ms": 23.273695899843005,
+      "median_ms": 20.385187499414315,
+      "p95_ms": 32.37941699990188,
+      "min_ms": 19.45408299798146,
+      "max_ms": 32.37941699990188
+    },
+    "search_ms": {
+      "count": 10,
+      "mean_ms": 1.5118999992409954,
+      "median_ms": 1.4475204989139456,
+      "p95_ms": 1.7699999989417847,
+      "min_ms": 1.3674590009031817,
+      "max_ms": 1.7699999989417847
+    },
+    "total_server_ms": {
+      "count": 10,
+      "mean_ms": 27.495704200555338,
+      "median_ms": 24.480458501784597,
+      "p95_ms": 37.00241599653964,
+      "min_ms": 23.547207998490194,
+      "max_ms": 37.00241599653964
+    },
+    "client_wall_ms": {
+      "count": 10,
+      "mean_ms": 29.115874899434857,
+      "median_ms": 25.92879149960936,
+      "p95_ms": 38.639250000414904,
+      "min_ms": 25.14674999838462,
+      "max_ms": 38.639250000414904
+    }
+  },
+  "cold_start_seconds": 11.138703291999263,
+  "hardware_note": "actual local macOS host; MPS if selected by runtime, CPU fallback remains supported"
+}
