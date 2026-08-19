@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "passed": true,
+  "checks": {
+    "claims_audit_readable": true,
+    "canonical_quality_numbers_used": true,
+    "local_scope_is_explicit": true,
+    "production_boundary_is_explicit": true,
+    "fairness_boundary_is_explicit": true,
+    "multilingual_boundary_is_explicit": true,
+    "content_safety_boundary_is_explicit": true,
+    "circo_result_not_claimed": true,
+    "no_state_of_the_art_claim": true
+  },
+  "supported_claim_count": 5,
+  "unsupported_claim_count": 6,
+  "canonical_source": "artifacts/phase26/claims_audit.json"
+}
