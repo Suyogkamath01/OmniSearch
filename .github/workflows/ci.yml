@@ -1,0 +1,43 @@
+name: OmniSearch CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  fast-checks:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      KMP_DUPLICATE_LIB_OK: "TRUE"
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version-file: .python-version
+
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+
+      - name: Install locked CI dependencies
+        run: uv sync --frozen --extra test
+
+      - name: Run fast tests
+        run: uv run pytest -q
+
+      - name: Run Ruff
+        run: uv run ruff check src tests
+
+      - name: Run mypy
+        run: uv run mypy src/omnisearch
+
+      - name: Compile source and tests
+        run: uv run python -m compileall -q src tests
