@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "passed": true,
+  "checks": {
+    "required_artifacts": true,
+    "report_pass": true,
+    "quality_gate_all_pass": true,
+    "provenance_no_training": true,
+    "provenance_no_git_write": true,
+    "no_phase27_audit_markdown": true,
+    "artifact_validation_self_check": true
+  },
+  "required": {
+    "pre_phase_audit.json": true,
+    "documentation_consistency.json": true,
+    "claims_validation.json": true,
+    "release_file_classification.json": true,
+    "link_validation.json": true,
+    "final_project_summary.json": true,
+    "portfolio_summary.json": true,
+    "resume_bullets.json": true,
+    "interview_summary.json": true,
+    "github_release_recommendations.json": true,
+    "provenance.json": true,
+    "phase27_report.json": true,
+    "artifact_validation.json": true
+  }
+}
