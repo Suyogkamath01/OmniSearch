@@ -1,0 +1,139 @@
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+
+[project]
+name = "omnisearch"
+version = "0.1.0"
+description = "Research scaffold for multimodal semantic retrieval experiments."
+readme = "README.md"
+requires-python = ">=3.12,<3.14"
+authors = [{ name = "OmniSearch" }]
+dependencies = []
+
+[project.optional-dependencies]
+# Installed only when the corresponding phase is explicitly started.
+phase4 = [
+  "torch>=2.5,<3",
+  "transformers>=4.45,<6",
+  "Pillow>=10.4,<12",
+  "safetensors>=0.4,<1",
+]
+phase8 = [
+  "peft>=0.17,<1",
+]
+research = [
+  "numpy>=2.0,<3",
+  "pandas>=2.2,<3",
+  "Pillow>=10.4,<12",
+  "scikit-learn>=1.5,<2",
+  "torch>=2.5,<3",
+  "torchvision>=0.20,<1",
+  "transformers>=4.45,<6",
+  "datasets>=3.0,<5",
+  "tqdm>=4.66,<5",
+  "PyYAML>=6.0,<7",
+  "safetensors>=0.4,<1",
+]
+retrieval = [
+  "numpy>=2.0,<3",
+  "faiss-cpu>=1.8,<2",
+  "hnswlib>=0.8,<1",
+]
+app = [
+  "fastapi>=0.115,<1",
+  "uvicorn[standard]>=0.30,<1",
+  "streamlit>=1.38,<2",
+]
+api = [
+  "fastapi>=0.115,<1",
+  "httpx>=0.27,<1",
+  "python-multipart>=0.0.9,<1",
+  "uvicorn[standard]>=0.30,<1",
+]
+deployment = [
+  "faiss-cpu>=1.8,<2",
+  "fastapi>=0.115,<1",
+  "httpx>=0.27,<1",
+  "numpy>=2.0,<3",
+  "Pillow>=10.4,<12",
+  "python-multipart>=0.0.9,<1",
+  "safetensors>=0.4,<1",
+  "streamlit>=1.38,<2",
+  "torch>=2.5,<3",
+  "transformers>=4.45,<6",
+  "uvicorn[standard]>=0.30,<1",
+]
+dev = [
+  "pytest>=8.3,<9",
+  "ruff>=0.6,<1",
+  "mypy>=1.11,<2",
+  "types-PyYAML>=6.0,<7",
+]
+test = [
+  "faiss-cpu>=1.8,<2",
+  "fastapi>=0.115,<1",
+  "hnswlib>=0.8,<1",
+  "httpx>=0.27,<1",
+  "numpy>=2.0,<3",
+  "Pillow>=10.4,<12",
+  "python-multipart>=0.0.9,<1",
+  "PyYAML>=6.0,<7",
+  "pytest>=8.3,<9",
+  "ruff>=0.6,<1",
+  "mypy>=1.11,<2",
+  "types-PyYAML>=6.0,<7",
+  "torch>=2.5,<3",
+]
+
+[project.scripts]
+omnisearch-bootstrap = "omnisearch.__main__:main"
+omnisearch-evaluate = "omnisearch.evaluation:main"
+omnisearch-phase6 = "omnisearch.phase6:main"
+omnisearch-phase7 = "omnisearch.phase7:main"
+omnisearch-phase8 = "omnisearch.phase8:main"
+omnisearch-phase9 = "omnisearch.phase9:main"
+omnisearch-phase10 = "omnisearch.phase10:main"
+omnisearch-phase11 = "omnisearch.phase11:main"
+omnisearch-phase12 = "omnisearch.phase12:main"
+omnisearch-phase12b = "omnisearch.phase12b:main"
+omnisearch-phase14 = "omnisearch.phase14:main"
+omnisearch-phase15 = "omnisearch.phase15:main"
+omnisearch-phase16 = "omnisearch.phase16:main"
+omnisearch-phase17 = "omnisearch.phase17:main"
+omnisearch-phase18 = "omnisearch.phase18:main"
+omnisearch-phase19 = "omnisearch.phase19:main"
+omnisearch-phase20 = "omnisearch.phase20:main"
+omnisearch-phase21 = "omnisearch.phase21:main"
+omnisearch-phase22 = "omnisearch.phase22:main"
+omnisearch-phase23 = "omnisearch.phase23:main"
+omnisearch-phase24 = "omnisearch.phase24:main"
+omnisearch-phase25 = "omnisearch.phase25:main"
+omnisearch-phase26 = "omnisearch.phase26:main"
+omnisearch-phase27 = "omnisearch.phase27:main"
+omnisearch-final-audit = "omnisearch.final_audit:main"
+omnisearch-api = "omnisearch.deployment:api_main"
+omnisearch-ui = "omnisearch.deployment:ui_main"
+omnisearch-preflight = "omnisearch.deployment:preflight_main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/omnisearch"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+addopts = "-m 'not real_model and not slow and not local_data'"
+markers = [
+  "unit: deterministic unit-level tests using fixtures or small synthetic inputs",
+  "integration: tests spanning multiple OmniSearch modules or service boundaries",
+  "real_model: optional smoke requiring the local model/checkpoint/index artifacts",
+  "slow: tests intentionally excluded from the default fast suite",
+  "local_data: tests requiring local dataset/model artifacts",
+  "artifact_validation: tests checking persisted artifact schemas or provenance",
+]
+
+[tool.mypy]
+# Phase-specific model/UI packages are optional runtime extras; CI still type
+# checks OmniSearch code without forcing model or application packages into the
+# compact test environment.
+ignore_missing_imports = true
