@@ -126,6 +126,8 @@ around the shared retrieval service.
 
 ### Run the Streamlit demo
 
+Live demo: https://omnisearch-t75fwaqtmpbu8yrtoqqysi.streamlit.app/
+
 Streamlit runs the service in-process and does not require FastAPI to be
 running separately:
 
