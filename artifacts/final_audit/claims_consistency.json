@@ -1,0 +1,8 @@
+{
+  "canonical_image_to_text_r5": 0.8143333333333334,
+  "canonical_text_to_image_r1": 0.8263473053892215,
+  "no_model_training": true,
+  "no_new_dataset_download": true,
+  "phase12b_no_quantitative_claim": true,
+  "phase26_final_benchmark_pass": true
+}
