@@ -1,0 +1,142 @@
+{
+  "new_overall": 8.5,
+  "previous_overall": 8.4,
+  "rating_basis": "portfolio-review heuristic, not an experimental metric",
+  "rows": [
+    {
+      "after": 9.5,
+      "before": 9.5,
+      "category": "Dataset validation / leakage protection",
+      "improved": "No change; already strong.",
+      "remaining_limitation": "Near-duplicate and semantic leakage detection remain limited."
+    },
+    {
+      "after": 8.0,
+      "before": 7.5,
+      "category": "Dataset access / legal documentation",
+      "improved": "Official-source, rights, and non-redistribution guidance clarified.",
+      "remaining_limitation": "Source rights remain external to the repository."
+    },
+    {
+      "after": 8.5,
+      "before": 8.5,
+      "category": "Preprocessing interfaces",
+      "improved": "No change; no defect found.",
+      "remaining_limitation": "Model-specific transforms remain model-owned."
+    },
+    {
+      "after": 8.5,
+      "before": 8.5,
+      "category": "Model implementation",
+      "improved": "No change; no retraining or model rewrite.",
+      "remaining_limitation": "Single final model family and local scope."
+    },
+    {
+      "after": 9.0,
+      "before": 9.0,
+      "category": "Retrieval quality",
+      "improved": "No change; canonical metrics frozen.",
+      "remaining_limitation": "No CIRCO result or external-domain quality claim."
+    },
+    {
+      "after": 9.0,
+      "before": 8.5,
+      "category": "Evaluation methodology",
+      "improved": "Image-to-text multi-positive metric semantics made explicit.",
+      "remaining_limitation": "COCO relevance remains metadata-defined."
+    },
+    {
+      "after": 9.0,
+      "before": 9.0,
+      "category": "Baseline / negative-result analysis",
+      "improved": "No change; preserved negative results.",
+      "remaining_limitation": "Reranker conclusion is configuration-specific."
+    },
+    {
+      "after": 9.0,
+      "before": 9.0,
+      "category": "Reproducibility",
+      "improved": "No change; existing lock/config/artifact contract retained.",
+      "remaining_limitation": "Large local artifacts remain required for the real demo."
+    },
+    {
+      "after": 8.0,
+      "before": 8.0,
+      "category": "Efficiency",
+      "improved": "Clarified measured cache and exact/ANN boundaries.",
+      "remaining_limitation": "MPS peak memory remains unreliably measured."
+    },
+    {
+      "after": 8.8,
+      "before": 8.5,
+      "category": "API / service engineering",
+      "improved": "Added media validation, configurable pixel bounds, and security headers.",
+      "remaining_limitation": "No authentication or public rate limiting."
+    },
+    {
+      "after": 8.7,
+      "before": 8.5,
+      "category": "UI / demo quality",
+      "improved": "Added visible upload limits and clearer privacy/input guidance.",
+      "remaining_limitation": "Still a local research demo."
+    },
+    {
+      "after": 8.2,
+      "before": 8.0,
+      "category": "Deployment packaging",
+      "improved": "Environment example and preflight/security behavior are clearer.",
+      "remaining_limitation": "Docker remains CPU-oriented and runtime-unvalidated."
+    },
+    {
+      "after": 9.0,
+      "before": 9.0,
+      "category": "Testing / CI",
+      "improved": "Added focused tests for the new safeguards.",
+      "remaining_limitation": "One Starlette/httpx deprecation warning remains."
+    },
+    {
+      "after": 9.5,
+      "before": 9.5,
+      "category": "Documentation quality",
+      "improved": "Clarifications were evidence-backed, not a score-only rewrite.",
+      "remaining_limitation": "Historical artifact naming remains preserved for provenance."
+    },
+    {
+      "after": 7.5,
+      "before": 7.0,
+      "category": "Responsible-AI coverage",
+      "improved": "System card now states intended use, privacy behavior, human oversight, and unknowns more precisely.",
+      "remaining_limitation": "No new fairness, multilingual, safety, accessibility, or human-study evidence."
+    },
+    {
+      "after": 6.5,
+      "before": 6.0,
+      "category": "Security / production readiness",
+      "improved": "Low-risk request, image, error, privacy-log, and browser-header safeguards improved.",
+      "remaining_limitation": "Not production-ready without auth, TLS, rate limiting, monitoring, moderation, and abuse controls."
+    },
+    {
+      "after": 7.0,
+      "before": 6.5,
+      "category": "Scalability",
+      "improved": "Existing Phase 10 evidence is now connected to an explicit exact-to-ANN handoff rule.",
+      "remaining_limitation": "No million-scale or real production-load benchmark."
+    },
+    {
+      "after": 9.1,
+      "before": 9.0,
+      "category": "Portfolio readiness",
+      "improved": "Metric semantics and security/rights boundaries are easier to explain.",
+      "remaining_limitation": "Portfolio claims remain limited to the declared local scope."
+    },
+    {
+      "after": 10.0,
+      "before": 10.0,
+      "category": "Phase completion discipline",
+      "improved": "No change; no Phase 28 work.",
+      "remaining_limitation": "Phase 12B remains partial by design."
+    }
+  ],
+  "schema_version": 1,
+  "score_change_rule": "Scores were held constant where the improvement pass found no actual defect or new evidence."
+}
