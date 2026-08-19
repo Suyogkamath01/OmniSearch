@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "passed": true,
+  "checks": {
+    "no_git_index_mutation_requested": true,
+    "large_artifacts_classified_local_only": true,
+    "secrets_classified_do_not_publish": true,
+    "new_clone_setup_warning_present": true
+  },
+  "PUBLIC_TRACK": [
+    "README.md",
+    ".gitignore",
+    ".env.example",
+    ".python-version",
+    "pyproject.toml",
+    "uv.lock",
+    "Dockerfile",
+    ".dockerignore",
+    "src/",
+    "tests/",
+    "configs/",
+    "docs/",
+    ".github/",
+    "data/*/.gitkeep"
+  ],
+  "OPTIONAL_PORTFOLIO_ARTIFACT": [
+    "artifacts/phase27/*.json",
+    "artifacts/phase26/*.json",
+    "artifacts/phase22/ui_*.png",
+    "selected phase reports and screenshots"
+  ],
+  "LOCAL_ONLY_IGNORE": [
+    "data/raw/**",
+    "data/interim/**",
+    "data/processed/**",
+    "artifacts/**/*.pt",
+    "artifacts/**/*.npy",
+    "artifacts/**/*.faiss",
+    "artifacts/phase7/**",
+    "artifacts/phase10/**",
+    "artifacts/phase12b/**",
+    ".venv/**",
+    ".env",
+    "Hugging Face model cache"
+  ],
+  "SENSITIVE_DO_NOT_PUBLISH": [
+    "secrets, access tokens, private datasets, browser profiles, and local logs: do not publish"
+  ],
+  "policy": "Do not stage, commit, push, or publish local datasets, checkpoints, caches, indexes, model caches, secrets, or private data."
+}
