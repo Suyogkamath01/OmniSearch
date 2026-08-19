@@ -1,0 +1,60 @@
+{
+  "evidence_files": [
+    "src/omnisearch/api/app.py",
+    "src/omnisearch/api/config.py",
+    "src/omnisearch/api/retrieval.py",
+    "src/omnisearch/ui/adapter.py",
+    "src/omnisearch/ui/streamlit_app.py",
+    "docs/evaluation.md",
+    "docs/architecture.md",
+    "docs/dataset_card.md",
+    "docs/system_card.md"
+  ],
+  "focused_tests_passed": true,
+  "improvements": [
+    {
+      "category": "security / service hardening",
+      "changes": [
+        "Added configurable decoded-image pixel limit.",
+        "Validated declared image media types while retaining Pillow byte validation.",
+        "Added nosniff, frame, referrer, permissions, and no-store response headers.",
+        "Added UI-side upload-size enforcement before retrieval."
+      ],
+      "remaining": "Authentication, public rate limiting, TLS, moderation, and abuse controls remain out of scope."
+    },
+    {
+      "category": "scalability readiness",
+      "changes": [
+        "Documented the index-loading boundary and exact-to-ANN handoff rule.",
+        "Linked the decision to retained Phase 10 fidelity and latency evidence."
+      ],
+      "remaining": "No million-item or public-load benchmark; FAISS Flat remains the default."
+    },
+    {
+      "category": "responsible AI",
+      "changes": [
+        "Expanded intended use, out-of-scope use, privacy behavior, human review, provenance, and unevaluated-risk guidance in the system card."
+      ],
+      "remaining": "No fabricated fairness, multilingual, accessibility, safety, or human-study results."
+    },
+    {
+      "category": "dataset/legal documentation",
+      "changes": [
+        "Added explicit official-source acquisition and image-rights guidance to the dataset card."
+      ],
+      "remaining": "Flickr30k and CIRCO access/storage limitations remain external constraints."
+    },
+    {
+      "category": "evaluation clarity",
+      "changes": [
+        "Documented why image-to-text Recall@1, precision@1, and MRR answer different questions."
+      ],
+      "remaining": "Metric definitions and retained results were not changed or recomputed."
+    }
+  ],
+  "no_dataset_download": true,
+  "no_model_training": true,
+  "no_scientific_result_changed": true,
+  "schema_version": 1,
+  "status": "PASS"
+}
