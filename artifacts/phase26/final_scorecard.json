@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "status": "PASS",
+  "checks": {
+    "held_out_test_metrics_retained": true,
+    "integrity_validation": true,
+    "api_health_and_ready": true,
+    "api_both_directions": true,
+    "ui_loaded": true,
+    "warm_latency_measured": true,
+    "reliability_passed": true,
+    "no_phase27_work": true
+  },
+  "metrics_scope": "research/demo validation; not a public production SLO",
+  "scorecard": {
+    "quality": "measured retained Phase 7 test results",
+    "deployment": "native API/UI smoke passed",
+    "reliability": "limited repeated/concurrent local checks",
+    "responsible_ai": "limitations explicitly scoped"
+  }
+}
