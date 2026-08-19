@@ -2,6 +2,13 @@
 
 > A reproducible image-text retrieval system built around fine-tuned CLIP, exact FAISS search, and a local FastAPI/Streamlit demo.
 
+[![OmniSearch CI](https://github.com/Suyogkamath01/OmniSearch/actions/workflows/ci.yml/badge.svg)](https://github.com/Suyogkamath01/OmniSearch/actions/workflows/ci.yml)
+[![Python 3.12](https://img.shields.io/badge/python-3.12-3776AB?logo=python&logoColor=white)](https://www.python.org/)
+[![Streamlit](https://img.shields.io/badge/UI-Streamlit-FF4B4B?logo=streamlit&logoColor=white)](https://streamlit.io/)
+[![FastAPI](https://img.shields.io/badge/API-FastAPI-009688?logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
+[![PyTorch](https://img.shields.io/badge/model-PyTorch-EE4C2C?logo=pytorch&logoColor=white)](https://pytorch.org/)
+[![FAISS](https://img.shields.io/badge/search-FAISS-0467DF)](https://faiss.ai/)
+
 OmniSearch maps images and captions into one shared embedding space and
 supports text-to-image and image-to-caption retrieval. It is designed as a
 serious technical portfolio project: the evaluation unit is explicit, splits
@@ -137,22 +144,23 @@ HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 \
 uv run omnisearch-ui
 ```
 
-## Demo screenshots
+## Live demo screenshots
 
-These are current captures from the local Streamlit application using the
-validated retrieval stack.
+These captures were refreshed from the public Streamlit deployment. The
+artifact-free cloud path uses a compact CPU gallery of public COCO validation
+images; the full validated checkpoint and benchmark artifacts remain local-only.
 
-![OmniSearch landing page showing the ready local retrieval demo.](artifacts/phase22/ui_landing.png)
+![OmniSearch landing page showing the ready public retrieval demo.](artifacts/phase22/ui_landing.png)
 
-*The landing view makes the selected model, device, and service state visible.*
+*The landing view makes the public model label, CPU device, and ready state visible.*
 
-![OmniSearch text-to-image search showing ranked image results.](artifacts/phase22/ui_text_to_image.png)
+![OmniSearch text-to-image search showing real bicycle image results.](artifacts/phase22/ui_text_to_image.png)
 
-*The text-to-image view shows the top five returned images for a query.*
+*The text-to-image view shows real ranked bicycle images for a live query.*
 
-![OmniSearch image-to-text mode showing its upload control.](artifacts/phase22/ui_image_to_text_mode.png)
+![OmniSearch image-to-caption mode showing its upload control.](artifacts/phase22/ui_image_to_text_mode.png)
 
-*The image-to-text view keeps the reverse retrieval path visible to a reviewer.*
+*The reverse-retrieval view keeps the upload and caption-search path visible to a reviewer.*
 
 ## Research and benchmarks
 
