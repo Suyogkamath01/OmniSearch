@@ -9,6 +9,8 @@
 [![PyTorch](https://img.shields.io/badge/model-PyTorch-EE4C2C?logo=pytorch&logoColor=white)](https://pytorch.org/)
 [![FAISS](https://img.shields.io/badge/search-FAISS-0467DF)](https://faiss.ai/)
 
+**▶️ Try the live app: https://omnisearch-t75fwaqtmpbu8yrtoqqysi.streamlit.app/**
+
 OmniSearch maps images and captions into one shared embedding space and
 supports text-to-image and image-to-caption retrieval. It is designed as a
 serious technical portfolio project: the evaluation unit is explicit, splits
