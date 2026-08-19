@@ -62,7 +62,7 @@ def build_assets(manifest_path: Path, image_root: Path, output_dir: Path, image_
             {
                 "image_id": str(record["image_id"]),
                 "filename": str(record["filename"]),
-                "image_url": str(record["image_url"]).replace("http://", "https://"),
+                "image_url": f"https://s3.amazonaws.com/images.cocodataset.org/val2017/{record['filename']}",
                 "captions": [
                     {
                         "caption_id": str(caption["caption_id"]),
