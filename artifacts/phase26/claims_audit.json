@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "supported": [
+    {
+      "claim": "Full-FT CLIP achieves the retained held-out Phase 7 metrics in the evaluated COCO scope.",
+      "evidence_ref": "artifacts/phase7/fine_tuned_text_to_image.json"
+    },
+    {
+      "claim": "FAISS Flat exact search is the validated current-corpus backend.",
+      "evidence_ref": "artifacts/phase26/integrity_validation.json"
+    },
+    {
+      "claim": "The native FastAPI service and Streamlit demo launch and serve both retrieval directions.",
+      "evidence_ref": "artifacts/phase26/final_benchmark.json"
+    },
+    {
+      "claim": "The canonical embedding cache reduces measured warm query cost relative to uncached encoding in the Phase 20 profile.",
+      "evidence_ref": "artifacts/phase20/cache_analysis.json"
+    },
+    {
+      "claim": "MPS is selected on the validated macOS host with CPU fallback in the runtime configuration.",
+      "evidence_ref": "artifacts/phase26/final_system_manifest.json"
+    }
+  ],
+  "unsupported": [
+    {
+      "claim": "Universal semantic search quality across domains or languages.",
+      "reason": "Only the declared English COCO evaluation scope was measured."
+    },
+    {
+      "claim": "Production readiness for public internet deployment.",
+      "reason": "Authentication, rate limiting, TLS, durable telemetry, abuse controls, and content safety are outside this research demo."
+    },
+    {
+      "claim": "Demographic fairness or protected-group parity.",
+      "reason": "No lawful protected-attribute labels or study were available."
+    },
+    {
+      "claim": "Million-scale ANN fidelity or latency.",
+      "reason": "The final default uses exact Flat search at current corpus scale."
+    },
+    {
+      "claim": "CIRCO/composed-image retrieval performance.",
+      "reason": "Phase 12B remains storage-blocked and has no measured results."
+    },
+    {
+      "claim": "Causal explanations from token or region perturbations.",
+      "reason": "Phase 18 provides local sensitivity evidence only."
+    }
+  ]
+}
