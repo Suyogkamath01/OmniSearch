@@ -1,0 +1,316 @@
+{
+  "schema_version": 1,
+  "project": "OmniSearch",
+  "phase": 24,
+  "code_version": "0.1.0",
+  "deployment_mode": "native_uv",
+  "primary_deployment_path": true,
+  "runtime": {
+    "python_version": "3.12.12",
+    "python_requirement": ">=3.12,<3.14",
+    "uv_version": "uv 0.9.13 (7ca92dcf6 2025-11-26)",
+    "lockfile_relative_path": "uv.lock",
+    "lockfile_sha256": "92d204ae82713f20432c15e0c8de142de9e183fabdf552500ae6e80a79b601fb"
+  },
+  "configuration": {
+    "root_from_environment": "OMNISEARCH_ROOT",
+    "host": "127.0.0.1",
+    "api_port": 8000,
+    "ui_port": 8501,
+    "offline_mode": true,
+    "device_preference": "auto",
+    "selected_device": "mps",
+    "openmp_workaround_on_macos": true
+  },
+  "model": {
+    "model_id": "openai/clip-vit-base-patch32",
+    "checkpoint": {
+      "relative_path": "artifacts/phase7/best_checkpoint.pt",
+      "kind": "file",
+      "required": true,
+      "exists": true,
+      "readable": true,
+      "bytes": 605242499,
+      "sha256": "cb0821a956f38abd0414fb5ffccd80216f244280225cdf9b5986ec64bb2a4524"
+    },
+    "checkpoint_metadata": {
+      "relative_path": "artifacts/phase7/checkpoint_metadata.json",
+      "kind": "file",
+      "required": true,
+      "exists": true,
+      "readable": true,
+      "bytes": 521,
+      "sha256": "a118b203e531f253604b9534a6cfec6cfaba93208dea78236cef81248e0aa8b8"
+    },
+    "local_hugging_face_cache_required_when_offline": true,
+    "cache_location_configuration": [
+      "HF_HOME",
+      "HF_HUB_CACHE",
+      "TRANSFORMERS_CACHE"
+    ]
+  },
+  "retrieval": {
+    "system": "Phase 7 full-FT CLIP + Phase 10 cached embeddings + FAISS Flat exact search",
+    "backend": "FAISS Flat exact inner-product search",
+    "embedding_dimension": 512,
+    "manifest": {
+      "relative_path": "data/processed/coco2017_val_split_manifest.json",
+      "kind": "file",
+      "required": true,
+      "exists": true,
+      "readable": true,
+      "bytes": 9336288,
+      "sha256": "09a2c1e56eb1a628b2ead16f064510d713f81aff5ee2f2d09b4ca8993bba3b43"
+    },
+    "image_root": {
+      "relative_path": "data/raw/coco2017/val2017",
+      "kind": "directory",
+      "required": true,
+      "exists": true,
+      "readable": true,
+      "bytes": 814705164
+    },
+    "embedding_cache": {
+      "relative_path": "artifacts/phase10/embedding_cache",
+      "kind": "directory",
+      "required": true,
+      "exists": true,
+      "readable": true,
+      "bytes": 62151005
+    },
+    "image_index": {
+      "relative_path": "artifacts/phase10/indexes/tier3/text_to_image/faiss_flat.faiss",
+      "kind": "file",
+      "required": true,
+      "exists": true,
+      "readable": true,
+      "bytes": 10240045,
+      "sha256": "ec45a33b568a9b3d5f129db8afd34ef89d84cb1327fa99d1d1bc3b327302bd04"
+    },
+    "image_index_metadata": {
+      "relative_path": "artifacts/phase10/indexes/tier3/text_to_image/faiss_flat.metadata.json",
+      "kind": "file",
+      "required": true,
+      "exists": true,
+      "readable": true,
+      "bytes": 1530,
+      "sha256": "ade7f8cd426c5b79cd54273b26b6c65fd24d8a24639e1e722b8e4404f19ffd22"
+    },
+    "caption_index": {
+      "relative_path": "artifacts/phase10/indexes/tier3/image_to_text/faiss_flat.faiss",
+      "kind": "file",
+      "required": true,
+      "exists": true,
+      "readable": true,
+      "bytes": 51228717,
+      "sha256": "aa2589ed99f070dfe082dd0a30655d0f9c49edfcb6bf7d2816e8fa1610b640ff"
+    },
+    "caption_index_metadata": {
+      "relative_path": "artifacts/phase10/indexes/tier3/image_to_text/faiss_flat.metadata.json",
+      "kind": "file",
+      "required": true,
+      "exists": true,
+      "readable": true,
+      "bytes": 1521,
+      "sha256": "5dc3d94f21c08ff0cb0537e6f3a3cb59d24efac71415b774e21f9d1dbe301e6b"
+    },
+    "phase20_report": {
+      "relative_path": "artifacts/phase20/phase20_report.json",
+      "kind": "file",
+      "required": true,
+      "exists": true,
+      "readable": true,
+      "bytes": 2751,
+      "sha256": "316de4c8c03d4a8cf2c965dd491ca2446128883c741bb40424cf999d819d30a1"
+    }
+  },
+  "required_local_artifacts": {
+    "phase20_report": {
+      "relative_path": "artifacts/phase20/phase20_report.json",
+      "kind": "file",
+      "required": true,
+      "exists": true,
+      "readable": true,
+      "bytes": 2751,
+      "sha256": "316de4c8c03d4a8cf2c965dd491ca2446128883c741bb40424cf999d819d30a1"
+    },
+    "phase20_recommendations": {
+      "relative_path": "artifacts/phase20/recommended_configurations.json",
+      "kind": "file",
+      "required": true,
+      "exists": true,
+      "readable": true,
+      "bytes": 1539,
+      "sha256": "b35c949ef99f087a2427a069fd5386f2ae967d2ec1daef5f57e99186b2b90fac"
+    },
+    "phase20_provenance": {
+      "relative_path": "artifacts/phase20/provenance.json",
+      "kind": "file",
+      "required": true,
+      "exists": true,
+      "readable": true,
+      "bytes": 1151,
+      "sha256": "b0d23cd8a7ff22b6baec4103037927ef04da43b59ea6e91196ded2ced626e1ec"
+    },
+    "checkpoint": {
+      "relative_path": "artifacts/phase7/best_checkpoint.pt",
+      "kind": "file",
+      "required": true,
+      "exists": true,
+      "readable": true,
+      "bytes": 605242499,
+      "sha256": "cb0821a956f38abd0414fb5ffccd80216f244280225cdf9b5986ec64bb2a4524"
+    },
+    "checkpoint_metadata": {
+      "relative_path": "artifacts/phase7/checkpoint_metadata.json",
+      "kind": "file",
+      "required": true,
+      "exists": true,
+      "readable": true,
+      "bytes": 521,
+      "sha256": "a118b203e531f253604b9534a6cfec6cfaba93208dea78236cef81248e0aa8b8"
+    },
+    "manifest": {
+      "relative_path": "data/processed/coco2017_val_split_manifest.json",
+      "kind": "file",
+      "required": true,
+      "exists": true,
+      "readable": true,
+      "bytes": 9336288,
+      "sha256": "09a2c1e56eb1a628b2ead16f064510d713f81aff5ee2f2d09b4ca8993bba3b43"
+    },
+    "image_root": {
+      "relative_path": "data/raw/coco2017/val2017",
+      "kind": "directory",
+      "required": true,
+      "exists": true,
+      "readable": true,
+      "bytes": 814705164
+    },
+    "embedding_cache": {
+      "relative_path": "artifacts/phase10/embedding_cache",
+      "kind": "directory",
+      "required": true,
+      "exists": true,
+      "readable": true,
+      "bytes": 62151005
+    },
+    "cache_metadata": {
+      "relative_path": "artifacts/phase10/embedding_cache/metadata.json",
+      "kind": "file",
+      "required": true,
+      "exists": true,
+      "readable": true,
+      "bytes": 932,
+      "sha256": "dd281cc80d2f63627c45701403952fcf9baa53cfd21f6f571fd7df381f7b9afd"
+    },
+    "image_vectors": {
+      "relative_path": "artifacts/phase10/embedding_cache/images.npy",
+      "kind": "file",
+      "required": true,
+      "exists": true,
+      "readable": true,
+      "bytes": 10240128,
+      "sha256": "3147ec36902b9c3ec87a866d2112b9bef2820af5fada8f3f8c77897b7fe409ba"
+    },
+    "caption_vectors": {
+      "relative_path": "artifacts/phase10/embedding_cache/captions.npy",
+      "kind": "file",
+      "required": true,
+      "exists": true,
+      "readable": true,
+      "bytes": 51228800,
+      "sha256": "a8d55ddf2a7244bde0fb02770943dd6c7253c731e2908e6b2dafeea8f7b2f232"
+    },
+    "image_ids": {
+      "relative_path": "artifacts/phase10/embedding_cache/image_ids.json",
+      "kind": "file",
+      "required": true,
+      "exists": true,
+      "readable": true,
+      "bytes": 59040,
+      "sha256": "3e7b768b782e9b12015917e143ba6dba4a5a49763c9e6c9db558a2df345398df"
+    },
+    "caption_ids": {
+      "relative_path": "artifacts/phase10/embedding_cache/caption_ids.json",
+      "kind": "file",
+      "required": true,
+      "exists": true,
+      "readable": true,
+      "bytes": 622105,
+      "sha256": "98652c51e8fcbb3fa1e97d6cf7f91d5b25ff032e1cc5c85fb77612fd01297b5c"
+    },
+    "image_index": {
+      "relative_path": "artifacts/phase10/indexes/tier3/text_to_image/faiss_flat.faiss",
+      "kind": "file",
+      "required": true,
+      "exists": true,
+      "readable": true,
+      "bytes": 10240045,
+      "sha256": "ec45a33b568a9b3d5f129db8afd34ef89d84cb1327fa99d1d1bc3b327302bd04"
+    },
+    "image_index_metadata": {
+      "relative_path": "artifacts/phase10/indexes/tier3/text_to_image/faiss_flat.metadata.json",
+      "kind": "file",
+      "required": true,
+      "exists": true,
+      "readable": true,
+      "bytes": 1530,
+      "sha256": "ade7f8cd426c5b79cd54273b26b6c65fd24d8a24639e1e722b8e4404f19ffd22"
+    },
+    "caption_index": {
+      "relative_path": "artifacts/phase10/indexes/tier3/image_to_text/faiss_flat.faiss",
+      "kind": "file",
+      "required": true,
+      "exists": true,
+      "readable": true,
+      "bytes": 51228717,
+      "sha256": "aa2589ed99f070dfe082dd0a30655d0f9c49edfcb6bf7d2816e8fa1610b640ff"
+    },
+    "caption_index_metadata": {
+      "relative_path": "artifacts/phase10/indexes/tier3/image_to_text/faiss_flat.metadata.json",
+      "kind": "file",
+      "required": true,
+      "exists": true,
+      "readable": true,
+      "bytes": 1521,
+      "sha256": "5dc3d94f21c08ff0cb0537e6f3a3cb59d24efac71415b774e21f9d1dbe301e6b"
+    }
+  },
+  "api": {
+    "version": "v1",
+    "entrypoint": "omnisearch-api"
+  },
+  "ui": {
+    "framework": "Streamlit",
+    "entrypoint": "omnisearch-ui",
+    "in_process_retrieval_service": true
+  },
+  "docker": {
+    "status": "optional_cpu_unvalidated",
+    "mps_supported": false,
+    "artifacts_mounted_not_baked": true,
+    "daemon_validated": false
+  },
+  "portable_components": [
+    "source code",
+    "tests",
+    "fixtures",
+    "uv.lock",
+    ".python-version",
+    "configuration example"
+  ],
+  "local_artifact_dependent_components": [
+    "checkpoint",
+    "embedding cache",
+    "FAISS indexes",
+    "COCO image root",
+    "offline model cache"
+  ],
+  "hardware_dependent_components": [
+    "MPS/CPU device selection",
+    "cold-start time",
+    "warm retrieval latency",
+    "native library behavior"
+  ]
+}
