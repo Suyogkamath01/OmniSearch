@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "passed": true,
+  "checks": {
+    "all_canonical_documents_exist": true,
+    "phase_27_complete_status_present": true,
+    "phase12b_not_called_complete": true,
+    "final_architecture_present": true,
+    "reranker_disabled_is_explicit": true,
+    "final_metrics_present": true,
+    "final_latency_present": true,
+    "no_phase27_not_started_claim": true,
+    "no_reusable_absolute_paths": true,
+    "no_obvious_marketing_claims": true,
+    "no_phase27_audit_document": true
+  },
+  "documents": [
+    "README.md",
+    "docs/roadmap.md",
+    "docs/experiments.md",
+    "docs/evaluation.md",
+    "docs/reproducibility.md",
+    "docs/technical_defense.md",
+    "docs/mathematical_foundations.md",
+    "docs/experimental_methodology.md",
+    "docs/limitations.md",
+    "docs/system_card.md"
+  ]
+}
