@@ -37,27 +37,27 @@ CLOUD_GALLERY = (
     (
         "000000038829.jpg",
         "A man riding a bicycle with a boy on the back of it.",
-        "https://images.cocodataset.org/val2017/000000038829.jpg",
+        "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000038829.jpg",
     ),
     (
         "000000017029.jpg",
         "A dog jumping to catch a red frisbee in a garden.",
-        "https://images.cocodataset.org/val2017/000000017029.jpg",
+        "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000017029.jpg",
     ),
     (
         "000000015335.jpg",
         "A group of people sitting at a table with food.",
-        "https://images.cocodataset.org/val2017/000000015335.jpg",
+        "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000015335.jpg",
     ),
     (
         "000000001532.jpg",
         "A street scene with focus on the street signs on an overpass.",
-        "https://images.cocodataset.org/val2017/000000001532.jpg",
+        "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000001532.jpg",
     ),
     (
         "000000001584.jpg",
         "A red double decker bus driving down a city street.",
-        "https://images.cocodataset.org/val2017/000000001584.jpg",
+        "https://s3.amazonaws.com/images.cocodataset.org/val2017/000000001584.jpg",
     ),
 )
 
@@ -283,6 +283,7 @@ class CompactCloudDemoService:
             "project": "OmniSearch",
             "model_family": "CLIP ViT-B/32",
             "model_id": CLOUD_MODEL_ID,
+            "model_display_name": "CLIP ViT-B/32 (public zero-shot)",
             "embedding_dimension": getattr(self._runtime, "embedding_dimension", 512),
             "retrieval_backend": self.retrieval_backend,
             "supported_query_modes": ["text-to-image", "image-to-text"],
