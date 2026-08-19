@@ -118,6 +118,7 @@ def format_result(result: Mapping[str, Any], mode: str) -> dict[str, Any]:
     if mode == "text-to-image":
         formatted["image_id"] = str(metadata.get("image_id", result.get("id", "")))
         formatted["filename"] = str(metadata.get("filename", ""))
+        formatted["image_url"] = str(metadata.get("image_url", ""))
     elif mode == "image-to-text":
         formatted["caption_id"] = str(metadata.get("caption_id", result.get("id", "")))
         formatted["image_id"] = str(metadata.get("image_id", ""))
