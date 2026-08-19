@@ -34,6 +34,7 @@ from omnisearch.ui.adapter import (
     run_text_search,
     safe_error_message,
 )
+from omnisearch.ui.cloud_demo import CompactCloudDemoService, local_artifacts_available
 
 MODE_TEXT_TO_IMAGE = "text-to-image"
 MODE_IMAGE_TO_TEXT = "image-to-text"
@@ -48,7 +49,7 @@ EXAMPLE_QUERIES = (
     "a street scene",
 )
 
-_ACTIVE_SERVICES: list[RetrievalService] = []
+_ACTIVE_SERVICES: list[Any] = []
 
 
 def _close_services() -> None:
@@ -68,11 +69,20 @@ atexit.register(_close_services)
 
 
 @st.cache_resource(show_spinner=False)
-def load_service(root: str) -> RetrievalService:
-    """Load validated resources once and reuse them across Streamlit reruns."""
+def load_service(root: str) -> Any:
+    """Load the full service or its artifact-free CPU cloud fallback once."""
 
     config = ServiceConfig.from_env(Path(root))
-    service = RetrievalService(config)
+    cloud_demo_requested = os.environ.get("OMNISEARCH_CLOUD_DEMO", "").strip().casefold() in {
+        "1",
+        "true",
+        "yes",
+        "on",
+    }
+    if cloud_demo_requested or not local_artifacts_available(config):
+        service: Any = CompactCloudDemoService(config)
+    else:
+        service = RetrievalService(config)
     service.load()
     if not any(existing is service for existing in _ACTIVE_SERVICES):
         _ACTIVE_SERVICES.append(service)
@@ -91,7 +101,7 @@ def _safe_image_path(config: ServiceConfig, filename: str) -> Path | None:
     return candidate if candidate.is_file() else None
 
 
-def _render_status(config: ServiceConfig, service: RetrievalService | None, service_error: BaseException | None) -> None:
+def _render_status(config: ServiceConfig, service: Any | None, service_error: BaseException | None) -> None:
     st.sidebar.subheader("Service status")
     if service is None:
         st.sidebar.error("Not ready")
@@ -115,6 +125,10 @@ def _render_status(config: ServiceConfig, service: RetrievalService | None, serv
             "default_top_k": info.get("default_top_k"),
             "API version": info.get("api_version"),
         }
+        if info.get("deployment_mode"):
+            status["deployment mode"] = info["deployment_mode"]
+        if info.get("gallery_note"):
+            status["gallery note"] = info["gallery_note"]
     st.sidebar.json(status)
 
 
@@ -145,6 +159,8 @@ def _render_image_results(config: ServiceConfig, response: dict[str, Any]) -> No
             image_path = _safe_image_path(config, row["filename"])
             if image_path is not None:
                 st.image(str(image_path), width="stretch")
+            elif row.get("image_url"):
+                st.image(row["image_url"], width="stretch")
             else:
                 st.warning("Image preview unavailable")
             st.markdown(f"**Rank {row['rank']} · score {row['score']:.4f}**")
@@ -164,10 +180,13 @@ def _render_caption_results(response: dict[str, Any]) -> None:
     _render_latency(response)
 
 
-def _render_about() -> None:
+def _render_about(deployment_mode: str | None = None) -> None:
     with st.expander("About and limitations", expanded=False):
-        st.write("Research/demo interface over the validated COCO retrieval artifact; it is not a production service.")
-        st.write("The corpus is COCO 2017 validation data with five captions per image. Scores are retrieval similarities, not calibrated confidence.")
+        if deployment_mode == "compact_cloud_demo":
+            st.write("This public deployment uses a compact public COCO validation gallery and the public zero-shot CLIP checkpoint; it is not the full validated COCO benchmark.")
+        else:
+            st.write("Research/demo interface over the validated COCO retrieval artifact; it is not a production service.")
+            st.write("The corpus is COCO 2017 validation data with five captions per image. Scores are retrieval similarities, not calibrated confidence.")
         st.write("No authentication, rate limiting, moderation, or private-data audit is provided.")
         st.write("CONTENT-SAFETY FILTERING: NOT IMPLEMENTED")
         st.write("Uploaded images are decoded in memory for the request and are not written to disk by this UI.")
@@ -177,8 +196,8 @@ def main() -> None:
     st.set_page_config(page_title="OmniSearch", page_icon="🔎", layout="wide")
     config = ServiceConfig.from_env(Path.cwd())
     st.title("OmniSearch")
-    st.caption("Local multimodal semantic retrieval demo · Phase 22")
-    st.write("Search the validated COCO corpus in either direction using the Phase 21 retrieval service.")
+    st.caption("Multimodal semantic retrieval demo · Phase 22")
+    st.write("Search an image-text retrieval gallery in either direction. A local checkout with the validated artifacts uses the full COCO service; an artifact-free public deployment uses a compact CPU demo gallery.")
     st.caption(
         f"Research/demo only · uploads stay in memory · image uploads are limited to "
         f"{config.max_upload_bytes // (1024 * 1024)} MiB and {config.max_image_pixels:,} pixels"
@@ -200,17 +219,21 @@ def main() -> None:
                 if st.button(example, key=f"example_{example}", use_container_width=True):
                     st.session_state["current_query"] = example
 
-    service: RetrievalService | None = None
+    service: Any | None = None
     service_error: BaseException | None = None
     with st.spinner("Loading validated model and indexes…"):
         try:
             service = load_service(str(config.root))
         except (ImportError, KeyError, OSError, RuntimeError, TypeError, ValueError, ServiceError) as error:
             service_error = error
-    _render_status(config, service, service_error)
+    active_config = getattr(service, "config", config)
+    deployment_mode = None
+    if service is not None:
+        deployment_mode = service.info().get("deployment_mode")
+    _render_status(active_config, service, service_error)
 
     if service is None:
-        st.error("Retrieval service unavailable. Check the Phase 21 artifact paths and restart the app.")
+        st.error("Retrieval service unavailable. Check the local artifacts or the public model download and restart the app.")
         _render_about()
         return
 
@@ -250,10 +273,10 @@ def main() -> None:
     if isinstance(latest, dict) and latest_mode == mode:
         st.subheader("Results")
         if mode == MODE_TEXT_TO_IMAGE:
-            _render_image_results(config, latest)
+            _render_image_results(active_config, latest)
         else:
             _render_caption_results(latest)
-    _render_about()
+    _render_about(deployment_mode)
 
 
 if __name__ == "__main__":
