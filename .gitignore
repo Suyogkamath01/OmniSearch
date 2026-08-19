@@ -1,0 +1,90 @@
+# Python environments, caches, and build output.
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+build/
+dist/
+
+# Operating-system, editor, and local runtime state.
+.DS_Store
+.idea/
+.vscode/
+.streamlit/
+*.log
+logs/
+
+# Environment files and credentials. Keep only the documented template public.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.crt
+*.p12
+credentials/
+secrets/
+
+# Dataset bytes, downloaded archives, generated manifests, and local caches.
+data/raw/**
+data/interim/**
+data/processed/**
+*.zip
+*.tar
+*.tar.gz
+!data/raw/.gitkeep
+!data/interim/.gitkeep
+!data/processed/.gitkeep
+
+# Generated experiments, checkpoints, embeddings, indexes, and reports are
+# local-only by default. A small, explicitly curated evidence set below is
+# public; all other artifacts remain untracked and reproducible locally.
+artifacts/**
+!artifacts/
+!artifacts/experiments/
+!artifacts/experiments/.gitkeep
+!artifacts/metrics/
+!artifacts/metrics/.gitkeep
+!artifacts/models/
+!artifacts/models/.gitkeep
+!artifacts/logs/
+!artifacts/logs/.gitkeep
+!artifacts/coco_phase1/
+!artifacts/coco_phase1/validation.json
+!artifacts/coco_phase1/statistics.json
+!artifacts/phase12b/
+!artifacts/phase12b/closure.json
+!artifacts/phase22/
+!artifacts/phase22/ui_landing.png
+!artifacts/phase22/ui_text_to_image.png
+!artifacts/phase22/ui_image_to_text_mode.png
+!artifacts/phase24/
+!artifacts/phase24/deployment_manifest.json
+!artifacts/phase26/
+!artifacts/phase26/claims_audit.json
+!artifacts/phase26/final_benchmark.json
+!artifacts/phase26/final_latency.json
+!artifacts/phase26/final_reliability.json
+!artifacts/phase26/final_scorecard.json
+!artifacts/phase26/final_system_manifest.json
+!artifacts/phase26/phase26_report.json
+!artifacts/phase27/
+!artifacts/phase27/*.json
+!artifacts/final_audit/
+!artifacts/final_audit/*.json
+
+# Explicitly local model/runtime formats even if placed outside artifacts.
+*.faiss
+*.hnsw
+*.npy
+*.npz
+*.pt
+*.pth
+*.safetensors
+*.onnx
+*.ckpt
