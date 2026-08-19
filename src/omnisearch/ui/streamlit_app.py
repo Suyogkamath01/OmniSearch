@@ -118,7 +118,7 @@ def _render_status(config: ServiceConfig, service: Any | None, service_error: Ba
         info = service.info()
         st.sidebar.success("Ready")
         status = {
-            "model": info.get("model_id"),
+            "model": info.get("model_display_name", info.get("model_id")),
             "backend": info.get("retrieval_backend"),
             "device": info.get("device"),
             "ready": service.ready,
