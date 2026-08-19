@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "quality_gate": {
+    "active_phases_1_27_pass": true,
+    "git_index_untouched": true,
+    "improvement_pass": true,
+    "no_phase28_work": true,
+    "phase12b_partial_non_blocking": true,
+    "phase26_claims_consistent": true,
+    "public_docs_validate": true
+  },
+  "required_artifacts": [
+    "claims_consistency.json",
+    "documentation_audit.json",
+    "final_scores.json",
+    "full_audit.json",
+    "improvement_pass.json",
+    "phase_status.json",
+    "provenance.json"
+  ],
+  "schema_version": 1
+}
