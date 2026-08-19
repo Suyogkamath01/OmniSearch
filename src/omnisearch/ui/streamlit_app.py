@@ -148,7 +148,7 @@ def _render_latency(response: dict[str, Any]) -> None:
         )
 
 
-def _render_image_results(config: ServiceConfig, response: dict[str, Any]) -> None:
+def _render_image_results(config: ServiceConfig, response: dict[str, Any], service: Any | None = None) -> None:
     rows = format_results(response, MODE_TEXT_TO_IMAGE)
     if not rows:
         st.info("No image results were returned.")
@@ -159,10 +159,16 @@ def _render_image_results(config: ServiceConfig, response: dict[str, Any]) -> No
             image_path = _safe_image_path(config, row["filename"])
             if image_path is not None:
                 st.image(str(image_path), width="stretch")
-            elif row.get("image_url"):
-                st.image(row["image_url"], width="stretch")
             else:
-                st.warning("Image preview unavailable")
+                preview_loader = getattr(service, "get_image_preview", None)
+                try:
+                    preview = preview_loader(row["image_id"]) if callable(preview_loader) else None
+                except (OSError, RuntimeError, TypeError, ValueError):
+                    preview = None
+                if preview is not None:
+                    st.image(preview, width="stretch")
+                else:
+                    st.warning("Image preview unavailable")
             st.markdown(f"**Rank {row['rank']} · score {row['score']:.4f}**")
             st.caption(f"Image ID: {row['image_id']} · {row['filename'] or 'filename unavailable'}")
     _render_latency(response)
@@ -273,7 +279,7 @@ def main() -> None:
     if isinstance(latest, dict) and latest_mode == mode:
         st.subheader("Results")
         if mode == MODE_TEXT_TO_IMAGE:
-            _render_image_results(active_config, latest)
+            _render_image_results(active_config, latest, service)
         else:
             _render_caption_results(latest)
     _render_about(deployment_mode)

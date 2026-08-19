@@ -107,6 +107,7 @@ class CompactCloudDemoService:
         self._caption_metadata: dict[str, dict[str, Any]] = {}
         self._image_ids: tuple[str, ...] = ()
         self._caption_ids: tuple[str, ...] = ()
+        self._preview_cache: dict[str, bytes] = {}
         self._model_lock = threading.Lock()
 
     @property
@@ -295,6 +296,28 @@ class CompactCloudDemoService:
             "gallery_note": "Public COCO validation gallery; not the full validated benchmark.",
         }
 
+    def get_image_preview(self, image_id: str) -> bytes:
+        """Fetch one public result image server-side for reliable UI rendering."""
+
+        if image_id in self._preview_cache:
+            return self._preview_cache[image_id]
+        metadata = self._image_metadata.get(image_id)
+        if metadata is None or not metadata.get("image_url"):
+            raise RuntimeError("image preview is unavailable")
+        source_url = str(metadata["image_url"])
+        urls = (source_url, source_url.replace("https://", "http://", 1))
+        last_error: BaseException | None = None
+        for url in urls:
+            try:
+                with urlopen(url, timeout=15) as response:
+                    payload = response.read(self.config.max_upload_bytes)
+                self._decode_image(payload).close()
+                self._preview_cache[image_id] = payload
+                return payload
+            except (OSError, TimeoutError, MalformedImageError) as error:
+                last_error = error
+        raise RuntimeError("public image preview could not be downloaded") from last_error
+
     def _decode_image(self, payload: bytes) -> Any:
         from PIL import Image, UnidentifiedImageError
 
@@ -351,4 +374,5 @@ class CompactCloudDemoService:
         self._runtime = None
         self._image_index = None
         self._caption_index = None
+        self._preview_cache.clear()
         self._temporary_gallery.cleanup()
