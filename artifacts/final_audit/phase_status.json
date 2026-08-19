@@ -1,0 +1,231 @@
+{
+  "active_dataset": "coco2017_val",
+  "all_active_phases_pass": true,
+  "phase12b": {
+    "non_blocking": true,
+    "quantitative_result_claimed": false,
+    "reason": "Official CIRCO gallery/storage requirement was not available; no score is claimed.",
+    "status": "PARTIAL"
+  },
+  "phase12b_non_blocking": true,
+  "phase_records": [
+    {
+      "active_artifact": "artifacts/coco_phase1/validation.json",
+      "active_evidence": "COCO manifest validation and real image validation",
+      "active_passed": true,
+      "historical_note": "Historical Flickr30k access was partial where recorded; the active COCO migration is audited separately.",
+      "historical_status": "partial_image_acquisition_blocked",
+      "phase": 1
+    },
+    {
+      "active_artifact": "artifacts/coco/phase2/phase2_report.json",
+      "active_evidence": "COCO metadata/image EDA and leakage re-audit",
+      "active_passed": true,
+      "historical_note": "Historical Flickr30k access was partial where recorded; the active COCO migration is audited separately.",
+      "historical_status": "partial_pipeline_verified_real_image_eda_blocked",
+      "phase": 2
+    },
+    {
+      "active_artifact": "artifacts/coco/phase3/phase3_report.json",
+      "active_evidence": "COCO text and image baseline rerun",
+      "active_passed": true,
+      "historical_note": "Historical Flickr30k access was partial where recorded; the active COCO migration is audited separately.",
+      "historical_status": "partial_real_text_baselines_image_baseline_blocked",
+      "phase": 3
+    },
+    {
+      "active_artifact": "artifacts/coco/phase4/phase4_report.json",
+      "active_evidence": "COCO frozen CLIP evaluation",
+      "active_passed": true,
+      "historical_note": "Historical Flickr30k access was partial where recorded; the active COCO migration is audited separately.",
+      "historical_status": "partial_zero_shot_pipeline_verified_real_flickr30k_cross_modal_blocked",
+      "phase": 4
+    },
+    {
+      "active_artifact": "artifacts/coco/phase5/phase5_report.json",
+      "active_evidence": "COCO unified evaluation migration",
+      "active_passed": true,
+      "historical_note": "Historical Flickr30k access was partial where recorded; the active COCO migration is audited separately.",
+      "historical_status": "not_applicable",
+      "phase": 5
+    },
+    {
+      "active_artifact": "artifacts/coco/phase6/phase6_report.json",
+      "active_evidence": "COCO frozen representation evaluation",
+      "active_passed": true,
+      "historical_note": "Historical Flickr30k access was partial where recorded; the active COCO migration is audited separately.",
+      "historical_status": "complete",
+      "phase": 6
+    },
+    {
+      "active_artifact": "artifacts/phase7/phase7_report.json",
+      "active_evidence": "Phase 7 retained report and quality gate",
+      "active_passed": true,
+      "historical_note": null,
+      "historical_status": "not_applicable",
+      "phase": 7
+    },
+    {
+      "active_artifact": "artifacts/phase8/phase8_report.json",
+      "active_evidence": "Phase 8 retained report and quality gate",
+      "active_passed": true,
+      "historical_note": null,
+      "historical_status": "not_applicable",
+      "phase": 8
+    },
+    {
+      "active_artifact": "artifacts/phase9/phase9_report.json",
+      "active_evidence": "Phase 9 retained report and quality gate",
+      "active_passed": true,
+      "historical_note": null,
+      "historical_status": "not_applicable",
+      "phase": 9
+    },
+    {
+      "active_artifact": "artifacts/phase10/phase10_report.json",
+      "active_evidence": "Phase 10 retained report and quality gate",
+      "active_passed": true,
+      "historical_note": null,
+      "historical_status": "not_applicable",
+      "phase": 10
+    },
+    {
+      "active_artifact": "artifacts/phase11/phase11_report.json",
+      "active_evidence": "Phase 11 retained report and quality gate",
+      "active_passed": true,
+      "historical_note": null,
+      "historical_status": "not_applicable",
+      "phase": 11
+    },
+    {
+      "active_artifact": "artifacts/phase12/phase12_report.json",
+      "active_evidence": "Phase 12 controlled fusion evaluation",
+      "active_passed": true,
+      "historical_note": null,
+      "historical_status": "not_applicable",
+      "phase": 12
+    },
+    {
+      "active_artifact": "artifacts/phase13/phase13_report.json",
+      "active_evidence": "Phase 13 retained report and quality gate",
+      "active_passed": true,
+      "historical_note": null,
+      "historical_status": "not_applicable",
+      "phase": 13
+    },
+    {
+      "active_artifact": "artifacts/phase14/phase14_report.json",
+      "active_evidence": "Phase 14 retained report and quality gate",
+      "active_passed": true,
+      "historical_note": null,
+      "historical_status": "not_applicable",
+      "phase": 14
+    },
+    {
+      "active_artifact": "artifacts/phase15/phase15_report.json",
+      "active_evidence": "Phase 15 retained report and quality gate",
+      "active_passed": true,
+      "historical_note": null,
+      "historical_status": "not_applicable",
+      "phase": 15
+    },
+    {
+      "active_artifact": "artifacts/phase16/phase16_report.json",
+      "active_evidence": "Phase 16 retained report and quality gate",
+      "active_passed": true,
+      "historical_note": null,
+      "historical_status": "not_applicable",
+      "phase": 16
+    },
+    {
+      "active_artifact": "artifacts/phase17/phase17_report.json",
+      "active_evidence": "Phase 17 retained report and quality gate",
+      "active_passed": true,
+      "historical_note": null,
+      "historical_status": "not_applicable",
+      "phase": 17
+    },
+    {
+      "active_artifact": "artifacts/phase18/phase18_report.json",
+      "active_evidence": "Phase 18 retained report and quality gate",
+      "active_passed": true,
+      "historical_note": null,
+      "historical_status": "not_applicable",
+      "phase": 18
+    },
+    {
+      "active_artifact": "artifacts/phase19/phase19_report.json",
+      "active_evidence": "Phase 19 retained report and quality gate",
+      "active_passed": true,
+      "historical_note": null,
+      "historical_status": "not_applicable",
+      "phase": 19
+    },
+    {
+      "active_artifact": "artifacts/phase20/phase20_report.json",
+      "active_evidence": "Phase 20 retained report and quality gate",
+      "active_passed": true,
+      "historical_note": null,
+      "historical_status": "not_applicable",
+      "phase": 20
+    },
+    {
+      "active_artifact": "artifacts/phase21/phase21_report.json",
+      "active_evidence": "Phase 21 retained report and quality gate",
+      "active_passed": true,
+      "historical_note": null,
+      "historical_status": "not_applicable",
+      "phase": 21
+    },
+    {
+      "active_artifact": "artifacts/phase22/phase22_report.json",
+      "active_evidence": "Phase 22 retained report and quality gate",
+      "active_passed": true,
+      "historical_note": null,
+      "historical_status": "not_applicable",
+      "phase": 22
+    },
+    {
+      "active_artifact": "artifacts/phase23/phase23_report.json",
+      "active_evidence": "Phase 23 retained report and quality gate",
+      "active_passed": true,
+      "historical_note": null,
+      "historical_status": "not_applicable",
+      "phase": 23
+    },
+    {
+      "active_artifact": "artifacts/phase24/phase24_report.json",
+      "active_evidence": "Phase 24 retained report and quality gate",
+      "active_passed": true,
+      "historical_note": null,
+      "historical_status": "not_applicable",
+      "phase": 24
+    },
+    {
+      "active_artifact": "artifacts/phase25/phase25_report.json",
+      "active_evidence": "Phase 25 retained report and quality gate",
+      "active_passed": true,
+      "historical_note": null,
+      "historical_status": "not_applicable",
+      "phase": 25
+    },
+    {
+      "active_artifact": "artifacts/phase26/phase26_report.json",
+      "active_evidence": "Phase 26 retained report and quality gate",
+      "active_passed": true,
+      "historical_note": null,
+      "historical_status": "not_applicable",
+      "phase": 26
+    },
+    {
+      "active_artifact": "artifacts/phase27/phase27_report.json",
+      "active_evidence": "Phase 27 retained report and quality gate",
+      "active_passed": true,
+      "historical_note": null,
+      "historical_status": "not_applicable",
+      "phase": 27
+    }
+  ],
+  "project": "OmniSearch",
+  "schema_version": 1
+}
