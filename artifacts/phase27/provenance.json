@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "project": "OmniSearch",
+  "phase": 27,
+  "generated_at_utc": "2026-08-18T12:47:56.317351+00:00",
+  "code_version": "0.1.0",
+  "training_performed": false,
+  "new_dataset_downloaded": false,
+  "new_model_downloaded": false,
+  "new_research_feature_introduced": false,
+  "historical_experiments_rerun": false,
+  "git_index_modified": false,
+  "committed": false,
+  "pushed": false,
+  "phase28_started": false,
+  "canonical_source": "artifacts/phase26"
+}
