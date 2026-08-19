@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "passed": true,
+  "checked_documents": [
+    "README.md",
+    "docs/roadmap.md",
+    "docs/experiments.md",
+    "docs/evaluation.md",
+    "docs/reproducibility.md",
+    "docs/technical_defense.md",
+    "docs/mathematical_foundations.md",
+    "docs/experimental_methodology.md",
+    "docs/limitations.md",
+    "docs/system_card.md"
+  ],
+  "broken_links": [],
+  "link_policy": "relative repository links are checked; external URLs are not fetched"
+}
