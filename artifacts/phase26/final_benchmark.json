@@ -1,0 +1,134 @@
+{
+  "schema_version": 1,
+  "status": "PASS",
+  "frozen_configuration_id": "phase26_final_quality_native_exact",
+  "retained_phase7_benchmark": {
+    "schema_version": 1,
+    "dataset": "COCO 2017 val selected image groups",
+    "protocol_version": "retrieval_eval_v1",
+    "test_integrity_note": "Metrics are retained held-out Phase 7 test measurements; Phase 26 did not tune or retrain.",
+    "directions": {
+      "text_to_image": {
+        "source": "artifacts/phase7/fine_tuned_text_to_image.json",
+        "measurement_status": "REUSED_MEASURED_PHASE7",
+        "split": "test",
+        "query_count": 501,
+        "candidate_count": 100,
+        "protocol": {
+          "protocol_version": "retrieval_eval_v1",
+          "task": "text_to_image",
+          "task_definition": {
+            "query_unit": "caption",
+            "candidate_unit": "image_group",
+            "relevance": "the image associated with the query caption is relevant",
+            "self_match": "not_applicable",
+            "metric_note": "Recall@K and rank statistics are primary; precision is optional and secondary"
+          },
+          "k_values": [
+            1,
+            5,
+            10
+          ],
+          "score_direction": "higher_is_better",
+          "tie_policy": "score_desc_then_candidate_id_asc",
+          "aggregation": "macro_query_level",
+          "candidate_filter": "declared candidate corpus; ranked list may be truncated",
+          "precision_definition": "hits in the returned prefix divided by K; omitted candidates count as non-hits",
+          "average_precision_definition": "AP uses the declared relevance set as denominator over the returned ranked list; report is truncated when the list is truncated",
+          "query_filter": "queries with declared relevance are evaluated; no-relevance queries are reported separately",
+          "rank_statistic": "first relevant rank; misses are counted separately and excluded from hit-rank mean/median"
+        },
+        "metrics": {
+          "recall_at_1": 0.8263473053892215,
+          "recall_at_5": 0.9880239520958084,
+          "recall_at_10": 1.0,
+          "mrr": 0.8945687989101163
+        },
+        "test_used_for_selection": false
+      },
+      "image_to_text": {
+        "source": "artifacts/phase7/fine_tuned_image_to_text.json",
+        "measurement_status": "REUSED_MEASURED_PHASE7",
+        "split": "test",
+        "query_count": 100,
+        "candidate_count": 501,
+        "protocol": {
+          "protocol_version": "retrieval_eval_v1",
+          "task": "image_to_text",
+          "task_definition": {
+            "query_unit": "image_group",
+            "candidate_unit": "caption",
+            "relevance": "all legitimate captions associated with the query image are relevant",
+            "self_match": "not_applicable",
+            "metric_note": "Recall@K and first-relevant rank handle multiple relevant captions"
+          },
+          "k_values": [
+            1,
+            5,
+            10
+          ],
+          "score_direction": "higher_is_better",
+          "tie_policy": "score_desc_then_candidate_id_asc",
+          "aggregation": "macro_query_level",
+          "candidate_filter": "declared candidate corpus; ranked list may be truncated",
+          "precision_definition": "hits in the returned prefix divided by K; omitted candidates count as non-hits",
+          "average_precision_definition": "AP uses the declared relevance set as denominator over the returned ranked list; report is truncated when the list is truncated",
+          "query_filter": "queries with declared relevance are evaluated; no-relevance queries are reported separately",
+          "rank_statistic": "first relevant rank; misses are counted separately and excluded from hit-rank mean/median"
+        },
+        "metrics": {
+          "recall_at_1": 0.18366666666666667,
+          "recall_at_5": 0.8143333333333334,
+          "recall_at_10": 0.9303333333333333,
+          "mrr": 0.9516666666666667
+        },
+        "test_used_for_selection": false
+      }
+    }
+  },
+  "integrity": {
+    "passed": true,
+    "checkpoint_sha256": "cb0821a956f38abd0414fb5ffccd80216f244280225cdf9b5986ec64bb2a4524",
+    "manifest_sha256": "09a2c1e56eb1a628b2ead16f064510d713f81aff5ee2f2d09b4ca8993bba3b43"
+  },
+  "live_deployment": {
+    "api_ready": true,
+    "ui_passed": true,
+    "health": {
+      "status": 200,
+      "body": {
+        "status": "ok",
+        "project": "OmniSearch",
+        "model_loaded": true,
+        "indexes_loaded": true,
+        "device": "mps",
+        "api_version": "v1"
+      }
+    },
+    "readiness": {
+      "status": 200,
+      "body": {
+        "ready": true,
+        "reason": null,
+        "api_version": "v1"
+      }
+    },
+    "text_smoke_count": 3,
+    "image_smoke_status": 200
+  },
+  "result_consistency": {
+    "schema_version": 1,
+    "passed": true,
+    "checks": {
+      "model_identity": true,
+      "backend_identity": true,
+      "text_results_repeatable": true,
+      "image_results_repeatable": true,
+      "image_result_matches_prior_canonical": true
+    },
+    "comparison_scope": "identity and deterministic smoke consistency; not a claim that the live 5,000-image corpus equals the Phase 7 100-image test candidate corpus"
+  },
+  "latency_artifact": "artifacts/phase26/final_latency.json",
+  "reliability_artifact": "artifacts/phase26/final_reliability.json",
+  "no_model_retraining": true
+}
